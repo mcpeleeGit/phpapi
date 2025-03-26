@@ -19,6 +19,28 @@ class SecurityMiddleware {
      * @return bool
      */
     public function before() {
+        // CORS 헤더 설정
+        header('Access-Control-Allow-Origin: http://localhost:3000');
+        header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+        header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Accept, Origin, x-security-token');
+        header('Access-Control-Allow-Credentials: true');
+        header('Access-Control-Max-Age: 86400');    // 24시간 동안 preflight 요청 캐시
+        
+        // OPTIONS 요청 처리 (preflight)
+        if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+            http_response_code(200);
+            exit();
+        }
+        
+        // Content-Type 헤더 검증
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'PUT') {
+            $contentType = $_SERVER['CONTENT_TYPE'] ?? '';
+            if (!str_contains($contentType, 'application/json')) {
+                Response::error('Content-Type must be application/json', 415);
+                return false;
+            }
+        }
+        
         // 현재 요청 경로 확인
         $currentPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $currentPath = rtrim($currentPath, '/');
@@ -126,23 +148,25 @@ class SecurityMiddleware {
     /**
      * 보안 이벤트 로깅
      * 
-     * @param string $type
-     * @param string $value
+     * @param string $type 이벤트 타입
+     * @param string $value 이벤트 값
+     * @param string|null $message 추가 메시지
      */
-    private function logSecurityEvent($type, $value) {
+    private function logSecurityEvent($type, $value, $message = null) {
         $timestamp = date('Y-m-d H:i:s');
         $ip = $this->getClientIp();
         $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $method = $_SERVER['REQUEST_METHOD'];
         
         $logMessage = sprintf(
-            "[%s] %s: %s | IP: %s | Path: %s | Method: %s\n",
+            "[%s] %s: %s | IP: %s | Path: %s | Method: %s%s\n",
             $timestamp,
             $type,
             $value,
             $ip,
             $path,
-            $method
+            $method,
+            $message ? " | Message: {$message}" : ""
         );
         
         file_put_contents(

@@ -1,0 +1,226 @@
+[Wed Mar 26 21:48:29 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
+[Wed Mar 26 21:48:36 2025] [::1]:52784 Accepted
+[Wed Mar 26 21:48:36 2025] [2025-03-26 21:48:36] INFO: Request received {"method":"OPTIONS","path":"\/auth\/login","request_body":""}
+
+[Wed Mar 26 21:48:36 2025] [::1]:52784 [200]: OPTIONS /auth/login
+[Wed Mar 26 21:48:36 2025] [::1]:52784 Closing
+[Wed Mar 26 21:48:36 2025] [::1]:52785 Accepted
+[Wed Mar 26 21:48:36 2025] [2025-03-26 21:48:36] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"testtest\"}"}
+
+[Wed Mar 26 21:48:37 2025] [2025-03-26 21:48:37] ERROR: Login failed {"message":"Invalid credentials","request_data":{"email":"mcpelee@hotmail.com","password":"testtest"}}
+
+[Wed Mar 26 21:48:37 2025] [2025-03-26 21:48:37] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":100,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"testtest\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"53","sec-ch-ua-platform":"\"macOS\"","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","Content-Type":"application\/json","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Wed Mar 26 21:48:37 2025] [::1]:52785 [401]: POST /auth/login
+[Wed Mar 26 21:48:37 2025] [::1]:52785 Closing
+[Wed Mar 26 21:49:11 2025] [::1]:52930 Accepted
+[Wed Mar 26 21:49:11 2025] [2025-03-26 21:49:11] INFO: Request received {"method":"OPTIONS","path":"\/auth\/login","request_body":""}
+
+[Wed Mar 26 21:49:11 2025] [::1]:52930 [200]: OPTIONS /auth/login
+[Wed Mar 26 21:49:11 2025] [::1]:52930 Closing
+[Wed Mar 26 21:49:11 2025] [::1]:52931 Accepted
+[Wed Mar 26 21:49:11 2025] [2025-03-26 21:49:11] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"testtest\"}"}
+
+[Wed Mar 26 21:49:11 2025] [::1]:52931 [200]: POST /auth/login
+[Wed Mar 26 21:49:11 2025] [::1]:52931 Closing
+[Wed Mar 26 21:50:03 2025] [::1]:53302 Accepted
+[Wed Mar 26 21:50:03 2025] [2025-03-26 21:50:03] INFO: Request received {"method":"OPTIONS","path":"\/auth\/login","request_body":""}
+
+[Wed Mar 26 21:50:03 2025] [::1]:53302 [200]: OPTIONS /auth/login
+[Wed Mar 26 21:50:03 2025] [::1]:53302 Closing
+[Wed Mar 26 21:50:03 2025] [::1]:53303 Accepted
+[Wed Mar 26 21:50:03 2025] [2025-03-26 21:50:03] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"testtest\"}"}
+
+[Wed Mar 26 21:50:03 2025] [2025-03-26 21:50:03] ERROR: Login failed {"message":"Invalid credentials","request_data":{"email":"mcpelee@hotmail.com","password":"testtest"}}
+
+[Wed Mar 26 21:50:03 2025] [2025-03-26 21:50:03] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":100,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"testtest\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"53","sec-ch-ua-platform":"\"macOS\"","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","Content-Type":"application\/json","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Wed Mar 26 21:50:03 2025] [::1]:53303 [401]: POST /auth/login
+[Wed Mar 26 21:50:03 2025] [::1]:53303 Closing
+[Wed Mar 26 21:50:25 2025] [::1]:53398 Accepted
+[Wed Mar 26 21:50:25 2025] [2025-03-26 21:50:25] INFO: Request received {"method":"OPTIONS","path":"\/auth\/login","request_body":""}
+
+[Wed Mar 26 21:50:25 2025] [::1]:53398 [200]: OPTIONS /auth/login
+[Wed Mar 26 21:50:25 2025] [::1]:53398 Closing
+[Wed Mar 26 21:50:25 2025] [::1]:53399 Accepted
+[Wed Mar 26 21:50:25 2025] [2025-03-26 21:50:25] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"testtest\"}"}
+
+[Wed Mar 26 21:50:25 2025] [::1]:53399 [200]: POST /auth/login
+[Wed Mar 26 21:50:25 2025] [::1]:53399 Closing
+[Wed Mar 26 21:50:53 2025] [::1]:53524 Accepted
+[Wed Mar 26 21:50:53 2025] [2025-03-26 21:50:53] INFO: Request received {"method":"OPTIONS","path":"\/auth\/login","request_body":""}
+
+[Wed Mar 26 21:50:53 2025] [::1]:53524 [200]: OPTIONS /auth/login
+[Wed Mar 26 21:50:53 2025] [::1]:53524 Closing
+[Wed Mar 26 21:50:53 2025] [::1]:53525 Accepted
+[Wed Mar 26 21:50:53 2025] [2025-03-26 21:50:53] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"testtest\"}"}
+
+[Wed Mar 26 21:50:53 2025] [::1]:53525 [200]: POST /auth/login
+[Wed Mar 26 21:50:53 2025] [::1]:53525 Closing
+[Wed Mar 26 21:53:38 2025] [::1]:54761 Accepted
+[Wed Mar 26 21:53:38 2025] [2025-03-26 21:53:38] INFO: Request received {"method":"OPTIONS","path":"\/auth\/login","request_body":""}
+
+[Wed Mar 26 21:53:38 2025] [::1]:54761 [200]: OPTIONS /auth/login
+[Wed Mar 26 21:53:38 2025] [::1]:54761 Closing
+[Wed Mar 26 21:53:38 2025] [::1]:54762 Accepted
+[Wed Mar 26 21:53:38 2025] [2025-03-26 21:53:38] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"testtest\"}"}
+
+[Wed Mar 26 21:53:38 2025] [2025-03-26 21:53:38] ERROR: Login failed {"message":"Invalid credentials","request_data":{"email":"mcpelee@hotmail.com","password":"testtest"}}
+
+[Wed Mar 26 21:53:38 2025] [2025-03-26 21:53:38] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":100,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"testtest\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"53","sec-ch-ua-platform":"\"macOS\"","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","Content-Type":"application\/json","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Wed Mar 26 21:53:38 2025] [::1]:54762 [401]: POST /auth/login
+[Wed Mar 26 21:53:38 2025] [::1]:54762 Closing
+[Wed Mar 26 21:53:46 2025] [::1]:54802 Accepted
+[Wed Mar 26 21:53:46 2025] [2025-03-26 21:53:46] INFO: Request received {"method":"OPTIONS","path":"\/auth\/login","request_body":""}
+
+[Wed Mar 26 21:53:46 2025] [::1]:54802 [200]: OPTIONS /auth/login
+[Wed Mar 26 21:53:46 2025] [::1]:54802 Closing
+[Wed Mar 26 21:53:46 2025] [::1]:54803 Accepted
+[Wed Mar 26 21:53:46 2025] [2025-03-26 21:53:46] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"testtest\"}"}
+
+[Wed Mar 26 21:53:47 2025] [::1]:54803 [200]: POST /auth/login
+[Wed Mar 26 21:53:47 2025] [::1]:54803 Closing
+[Wed Mar 26 21:54:06 2025] [::1]:54891 Accepted
+[Wed Mar 26 21:54:06 2025] [2025-03-26 21:54:06] INFO: Request received {"method":"OPTIONS","path":"\/auth\/signup","request_body":""}
+
+[Wed Mar 26 21:54:06 2025] [::1]:54891 [200]: OPTIONS /auth/signup
+[Wed Mar 26 21:54:06 2025] [::1]:54891 Closing
+[Wed Mar 26 21:54:06 2025] [::1]:54892 Accepted
+[Wed Mar 26 21:54:06 2025] [2025-03-26 21:54:06] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"testtest\",\"name\":\"Dong-Ha Lee\"}"}
+
+[Wed Mar 26 21:54:06 2025] [::1]:54892 [200]: POST /auth/signup
+[Wed Mar 26 21:54:06 2025] [::1]:54892 Closing
+[Wed Mar 26 21:54:12 2025] [::1]:54920 Accepted
+[Wed Mar 26 21:54:12 2025] [2025-03-26 21:54:12] INFO: Request received {"method":"OPTIONS","path":"\/auth\/login","request_body":""}
+
+[Wed Mar 26 21:54:12 2025] [::1]:54920 [200]: OPTIONS /auth/login
+[Wed Mar 26 21:54:12 2025] [::1]:54920 Closing
+[Wed Mar 26 21:54:12 2025] [::1]:54921 Accepted
+[Wed Mar 26 21:54:12 2025] [2025-03-26 21:54:12] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"testtest\"}"}
+
+[Wed Mar 26 21:54:12 2025] [::1]:54921 [200]: POST /auth/login
+[Wed Mar 26 21:54:12 2025] [::1]:54921 Closing
+[Wed Mar 26 21:58:54 2025] [::1]:56664 Accepted
+[Wed Mar 26 21:58:54 2025] [2025-03-26 21:58:54] INFO: Request received {"method":"OPTIONS","path":"\/auth\/login","request_body":""}
+
+[Wed Mar 26 21:58:54 2025] [::1]:56664 [200]: OPTIONS /auth/login
+[Wed Mar 26 21:58:54 2025] [::1]:56664 Closing
+[Wed Mar 26 21:58:54 2025] [::1]:56665 Accepted
+[Wed Mar 26 21:58:54 2025] [2025-03-26 21:58:54] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"febffb51f7dc3d2e0a77d42995a630c8af5f81c69ce6fec9989a0840e9f37c2b\"}"}
+
+[Wed Mar 26 21:58:55 2025] [2025-03-26 21:58:55] ERROR: Login failed {"message":"Invalid credentials","request_data":{"email":"mcpelee@hotmail.com","password":"febffb51f7dc3d2e0a77d42995a630c8af5f81c69ce6fec9989a0840e9f37c2b"}}
+
+[Wed Mar 26 21:58:55 2025] [2025-03-26 21:58:55] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":100,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"febffb51f7dc3d2e0a77d42995a630c8af5f81c69ce6fec9989a0840e9f37c2b\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"109","sec-ch-ua-platform":"\"macOS\"","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","Content-Type":"application\/json","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Wed Mar 26 21:58:55 2025] [::1]:56665 [401]: POST /auth/login
+[Wed Mar 26 21:58:55 2025] [::1]:56665 Closing
+[Wed Mar 26 22:07:00 2025] [::1]:59109 Accepted
+[Wed Mar 26 22:07:00 2025] [2025-03-26 22:07:00] INFO: Request received {"method":"OPTIONS","path":"\/auth\/signup","request_body":""}
+
+[Wed Mar 26 22:07:00 2025] [::1]:59109 [200]: OPTIONS /auth/signup
+[Wed Mar 26 22:07:00 2025] [::1]:59109 Closing
+[Wed Mar 26 22:08:57 2025] [::1]:59603 Accepted
+[Wed Mar 26 22:08:57 2025] [2025-03-26 22:08:57] INFO: Request received {"method":"OPTIONS","path":"\/auth\/signup","request_body":""}
+
+[Wed Mar 26 22:08:57 2025] [::1]:59603 [200]: OPTIONS /auth/signup
+[Wed Mar 26 22:08:57 2025] [::1]:59603 Closing
+[Wed Mar 26 22:10:10 2025] [::1]:59961 Accepted
+[Wed Mar 26 22:10:10 2025] [2025-03-26 22:10:10] INFO: Request received {"method":"OPTIONS","path":"\/auth\/signup","request_body":""}
+
+[Wed Mar 26 22:10:10 2025] [::1]:59961 [200]: OPTIONS /auth/signup
+[Wed Mar 26 22:10:10 2025] [::1]:59961 Closing
+[Wed Mar 26 22:13:06 2025] [::1]:60947 Accepted
+[Wed Mar 26 22:13:06 2025] [2025-03-26 22:13:06] INFO: Request received {"method":"OPTIONS","path":"\/auth\/signup","request_body":""}
+
+[Wed Mar 26 22:13:06 2025] [::1]:60947 [200]: OPTIONS /auth/signup
+[Wed Mar 26 22:13:06 2025] [::1]:60947 Closing
+[Wed Mar 26 22:13:55 2025] [::1]:61191 Accepted
+[Wed Mar 26 22:13:55 2025] [2025-03-26 22:13:55] INFO: Request received {"method":"OPTIONS","path":"\/auth\/signup","request_body":""}
+
+[Wed Mar 26 22:13:55 2025] [::1]:61191 [200]: OPTIONS /auth/signup
+[Wed Mar 26 22:13:55 2025] [::1]:61191 Closing
+[Wed Mar 26 22:13:55 2025] [::1]:61192 Accepted
+[Wed Mar 26 22:13:55 2025] [2025-03-26 22:13:55] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
+
+[Wed Mar 26 22:13:55 2025] [::1]:61192 [200]: POST /auth/signup
+[Wed Mar 26 22:13:55 2025] [::1]:61192 Closing
+[Wed Mar 26 22:18:52 2025] [::1]:62856 Accepted
+[Wed Mar 26 22:18:52 2025] [2025-03-26 22:18:52] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\",\"phone\":\"01091829965\"}"}
+
+[Wed Mar 26 22:18:52 2025] [::1]:62856 [200]: POST /auth/signup
+[Wed Mar 26 22:18:52 2025] [::1]:62856 Closing
+[Wed Mar 26 22:20:21 2025] [::1]:63575 Accepted
+[Wed Mar 26 22:20:21 2025] [2025-03-26 22:20:21] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
+
+[Wed Mar 26 22:20:21 2025] [::1]:63575 [200]: POST /auth/signup
+[Wed Mar 26 22:20:21 2025] [::1]:63575 Closing
+[Wed Mar 26 22:22:01 2025] [::1]:64113 Accepted
+[Wed Mar 26 22:22:01 2025] [2025-03-26 22:22:01] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
+
+[Wed Mar 26 22:22:01 2025] [::1]:64113 [200]: POST /auth/signup
+[Wed Mar 26 22:22:01 2025] [::1]:64113 Closing
+[Wed Mar 26 22:23:03 2025] [::1]:64429 Accepted
+[Wed Mar 26 22:23:03 2025] [2025-03-26 22:23:03] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
+
+[Wed Mar 26 22:23:03 2025] [::1]:64429 [200]: POST /auth/signup
+[Wed Mar 26 22:23:03 2025] [::1]:64429 Closing
+[Wed Mar 26 22:23:03 2025] [::1]:64432 Accepted
+[Wed Mar 26 22:23:03 2025] [2025-03-26 22:23:03] INFO: Request received {"method":"OPTIONS","path":"\/auth\/login","request_body":""}
+
+[Wed Mar 26 22:23:03 2025] [::1]:64432 [200]: OPTIONS /auth/login
+[Wed Mar 26 22:23:03 2025] [::1]:64432 Closing
+[Wed Mar 26 22:23:03 2025] [::1]:64433 Accepted
+[Wed Mar 26 22:23:03 2025] [2025-03-26 22:23:03] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Wed Mar 26 22:23:03 2025] [2025-03-26 22:23:03] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":93,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"109","X-Security-Token":"fed853f59ab8484c3ad35cf8a4a4d2cd","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
+
+[Wed Mar 26 22:23:03 2025] [::1]:64433 [401]: POST /auth/login
+[Wed Mar 26 22:23:03 2025] [::1]:64433 Closing
+[Wed Mar 26 22:23:35 2025] [::1]:64573 Accepted
+[Wed Mar 26 22:23:35 2025] [2025-03-26 22:23:35] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
+
+[Wed Mar 26 22:23:35 2025] [::1]:64573 [200]: POST /auth/login
+[Wed Mar 26 22:23:35 2025] [::1]:64573 Closing
+[Wed Mar 26 22:23:48 2025] [::1]:64629 Accepted
+[Wed Mar 26 22:23:48 2025] [2025-03-26 22:23:48] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
+
+[Wed Mar 26 22:23:48 2025] [::1]:64629 [200]: POST /auth/login
+[Wed Mar 26 22:23:48 2025] [::1]:64629 Closing
+[Wed Mar 26 22:24:47 2025] [::1]:64881 Accepted
+[Wed Mar 26 22:24:47 2025] [2025-03-26 22:24:47] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
+
+[Wed Mar 26 22:24:47 2025] [::1]:64881 [200]: POST /auth/signup
+[Wed Mar 26 22:24:47 2025] [::1]:64881 Closing
+[Wed Mar 26 22:24:47 2025] [::1]:64884 Accepted
+[Wed Mar 26 22:24:47 2025] [2025-03-26 22:24:47] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Wed Mar 26 22:24:48 2025] [2025-03-26 22:24:48] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":93,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"25f662e5143c7d1f5846abdfbac83987","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
+
+[Wed Mar 26 22:24:48 2025] [::1]:64884 [401]: POST /auth/login
+[Wed Mar 26 22:24:48 2025] [::1]:64884 Closing
+[Wed Mar 26 22:26:04 2025] [::1]:65270 Accepted
+[Wed Mar 26 22:26:04 2025] [2025-03-26 22:26:04] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
+
+[Wed Mar 26 22:26:04 2025] [::1]:65270 [200]: POST /auth/signup
+[Wed Mar 26 22:26:04 2025] [::1]:65270 Closing
+[Wed Mar 26 22:26:04 2025] [::1]:65273 Accepted
+[Wed Mar 26 22:26:04 2025] [2025-03-26 22:26:04] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
+
+[Wed Mar 26 22:26:05 2025] [::1]:65273 [200]: POST /auth/login
+[Wed Mar 26 22:26:05 2025] [::1]:65273 Closing
+[Wed Mar 26 22:26:45 2025] [::1]:65490 Accepted
+[Wed Mar 26 22:26:45 2025] [2025-03-26 22:26:45] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
+
+[Wed Mar 26 22:26:46 2025] [::1]:65490 [200]: POST /auth/login
+[Wed Mar 26 22:26:46 2025] [::1]:65490 Closing
+[Wed Mar 26 22:29:21 2025] [::1]:49881 Accepted
+[Wed Mar 26 22:29:21 2025] [2025-03-26 22:29:21] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
+
+[Wed Mar 26 22:29:21 2025] [::1]:49881 [200]: POST /auth/login
+[Wed Mar 26 22:29:21 2025] [::1]:49881 Closing
+[Wed Mar 26 22:33:08 2025] [::1]:51226 Accepted
+[Wed Mar 26 22:33:08 2025] [2025-03-26 22:33:08] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
+
+[Wed Mar 26 22:33:08 2025] [::1]:51226 [200]: POST /auth/login
+[Wed Mar 26 22:33:08 2025] [::1]:51226 Closing

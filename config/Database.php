@@ -17,7 +17,8 @@ class Database {
                 ]
             );
         } catch (PDOException $e) {
-            throw new Exception('데이터베이스 연결에 실패했습니다: ' . $e->getMessage());
+            error_log("Database Connection Error: " . $e->getMessage());
+            throw new Exception('데이터베이스 연결에 실패했습니다.', 500);
         }
     }
     
