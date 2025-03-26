@@ -17,7 +17,8 @@ class SignupResponse {
         return [
             'id' => $this->result['id'],
             'email' => $this->result['email'],
-            'name' => $this->result['name']
+            'name' => $this->result['name'],
+            'user_type' => $this->result['user_type']
         ];
     }
     

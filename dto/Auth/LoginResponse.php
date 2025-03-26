@@ -19,7 +19,8 @@ class LoginResponse {
             'user' => [
                 'id' => $this->result['user']['id'],
                 'email' => $this->result['user']['email'],
-                'name' => $this->result['user']['name']
+                'name' => $this->result['user']['name'],
+                'user_type' => $this->result['user']['user_type']
             ]
         ];
     }

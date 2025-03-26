@@ -39,10 +39,17 @@ class AuthService {
             // 비밀번호 해시화
             $hashedPassword = password_hash($request->getPassword(), PASSWORD_DEFAULT);
             
+            // 비밀번호 해시 로깅
+            $this->logger->info("Signup password hash", [
+                'email' => $request->getEmail(),
+                'original_password' => $request->getPassword(),
+                'hashed_password' => $hashedPassword
+            ]);
+            
             // 사용자 등록
             $stmt = $this->db->prepare("
-                INSERT INTO users (email, password, name)
-                VALUES (?, ?, ?)
+                INSERT INTO users (email, password, name, user_type)
+                VALUES (?, ?, ?, 'USER')
             ");
             
             $stmt->execute([
@@ -56,7 +63,8 @@ class AuthService {
             return [
                 'id' => $userId,
                 'email' => $request->getEmail(),
-                'name' => $request->getName()
+                'name' => $request->getName(),
+                'user_type' => 'USER'
             ];
         } catch (PDOException $e) {
             $this->logger->error("Signup failed", [
@@ -81,7 +89,7 @@ class AuthService {
         try {
             // 사용자 조회
             $stmt = $this->db->prepare("
-                SELECT id, email, password, name
+                SELECT id, email, password, name, user_type
                 FROM users
                 WHERE email = ?
             ");
@@ -89,7 +97,23 @@ class AuthService {
             $stmt->execute([$request->getEmail()]);
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
             
-            if (!$user || !password_verify($request->getPassword(), $user['password'])) {
+            if (!$user) {
+                throw new ValidationException('이메일 또는 비밀번호가 올바르지 않습니다.', 401, 'LOGIN_REQUEST_INVALID_CREDENTIALS');
+            }
+            
+            // 비밀번호 검증 로깅
+            $this->logger->info("Login password verification", [
+                'email' => $request->getEmail(),
+                'login_password' => $request->getPassword(),
+                'stored_hashed_password' => $user['password'],
+                'password_verify_result' => password_verify($request->getPassword(), $user['password']),
+                'password_length' => strlen($request->getPassword()),
+                'stored_hash_length' => strlen($user['password']),
+                'password_info' => password_get_info($user['password'])
+            ]);
+            
+            // 프론트엔드에서 받은 SHA-256 해시를 bcrypt로 다시 해시
+            if (!password_verify($request->getPassword(), $user['password'])) {
                 throw new ValidationException('이메일 또는 비밀번호가 올바르지 않습니다.', 401, 'LOGIN_REQUEST_INVALID_CREDENTIALS');
             }
             
@@ -101,7 +125,8 @@ class AuthService {
                 'user' => [
                     'id' => $user['id'],
                     'email' => $user['email'],
-                    'name' => $user['name']
+                    'name' => $user['name'],
+                    'user_type' => $user['user_type']
                 ]
             ];
         } catch (PDOException $e) {
