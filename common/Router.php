@@ -9,6 +9,7 @@ class Router {
         require_once __DIR__ . '/../middleware/SecurityMiddleware.php';
         require_once __DIR__ . '/Response.php';
         require_once __DIR__ . '/Request.php';
+        require_once __DIR__ . '/ValidationException.php';
         
         $this->authMiddleware = new AuthMiddleware();
         $this->securityMiddleware = new SecurityMiddleware();
@@ -59,7 +60,21 @@ class Router {
             return;
         }
         
-        $controller->$methodName();
+        try {
+            $controller->$methodName();
+        } catch (ValidationException $e) {
+            Response::error(
+                $e->getMessage(),
+                $e->getCode(),
+                ['error_code' => $e->getErrorCode()]
+            );
+        } catch (Exception $e) {
+            Response::error(
+                $e->getMessage(),
+                $e->getCode() ?: 500,
+                ['error_code' => 'INTERNAL_SERVER_ERROR']
+            );
+        }
         
         // 미들웨어 after 메소드 실행
         $this->securityMiddleware->after();
@@ -82,12 +97,10 @@ class Router {
      * @param string $message
      */
     private function sendNotFound($message) {
-        header('HTTP/1.1 404 Not Found');
-        header('Content-Type: application/json');
-        echo json_encode([
-            'error' => 'Not Found',
-            'message' => $message
-        ]);
-        exit;
+        Response::error(
+            $message,
+            404,
+            ['error_code' => 'NOT_FOUND']
+        );
     }
 } 

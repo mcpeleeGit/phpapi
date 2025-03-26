@@ -1,98 +1,94 @@
 <?php
 
 class AuthService {
-    private $users = []; // 임시 사용자 저장소
+    private $db;
+    
+    public function __construct() {
+        require_once __DIR__ . '/../config/Database.php';
+        $this->db = Database::getInstance();
+    }
     
     /**
      * 회원가입 처리
      * 
-     * @param string $email
-     * @param string $password
-     * @param string $name
+     * @param SignupRequest $request
      * @return array
      * @throws Exception
      */
-    public function signup($email, $password, $name) {
-        // 이메일 형식 검증
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new Exception('Invalid email format');
+    public function signup(SignupRequest $request) {
+        // 이메일 중복 검사
+        $stmt = $this->db->prepare('SELECT id FROM users WHERE email = ?');
+        $stmt->execute([$request->getEmail()]);
+        if ($stmt->fetch()) {
+            throw new Exception('이미 사용 중인 이메일입니다.', 400);
         }
         
-        // 비밀번호 복잡도 검증
-        if (strlen($password) < 8) {
-            throw new Exception('Password must be at least 8 characters long');
-        }
-        
-        // 이메일 중복 체크
-        if (isset($this->users[$email])) {
-            throw new Exception('Email already exists');
-        }
+        // 비밀번호 해시화
+        $hashedPassword = password_hash($request->getPassword(), PASSWORD_DEFAULT);
         
         // 사용자 생성
-        $user = [
-            'id' => uniqid(),
-            'email' => $email,
-            'password' => password_hash($password, PASSWORD_DEFAULT),
-            'name' => $name,
-            'created_at' => date('Y-m-d H:i:s')
+        $stmt = $this->db->prepare('INSERT INTO users (email, password, name) VALUES (?, ?, ?)');
+        $stmt->execute([
+            $request->getEmail(),
+            $hashedPassword,
+            $request->getName()
+        ]);
+        
+        $userId = $this->db->lastInsertId();
+        
+        return [
+            'id' => $userId,
+            'email' => $request->getEmail(),
+            'name' => $request->getName()
         ];
-        
-        // 임시 저장소에 저장
-        $this->users[$email] = $user;
-        
-        // 비밀번호 제외하고 반환
-        unset($user['password']);
-        return $user;
     }
     
     /**
      * 로그인 처리
      * 
-     * @param string $email
-     * @param string $password
+     * @param LoginRequest $request
      * @return array
      * @throws Exception
      */
-    public function login($email, $password) {
-        // 사용자 존재 여부 확인
-        if (!isset($this->users[$email])) {
-            throw new Exception('Invalid email or password');
+    public function login(LoginRequest $request) {
+        // 사용자 조회
+        $stmt = $this->db->prepare('SELECT id, email, password, name FROM users WHERE email = ?');
+        $stmt->execute([$request->getEmail()]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if (!$user || !password_verify($request->getPassword(), $user['password'])) {
+            throw new Exception('이메일 또는 비밀번호가 일치하지 않습니다.', 401);
         }
         
-        $user = $this->users[$email];
-        
-        // 비밀번호 검증
-        if (!password_verify($password, $user['password'])) {
-            throw new Exception('Invalid email or password');
-        }
-        
-        // TODO: 실제 JWT 토큰 생성 로직 구현
-        $token = $this->generateToken($user);
-        
-        // 사용자 정보에서 비밀번호 제외
-        unset($user['password']);
+        // JWT 토큰 생성
+        $token = $this->generateToken($user['id']);
         
         return [
             'token' => $token,
-            'user' => $user
+            'user' => [
+                'id' => $user['id'],
+                'email' => $user['email'],
+                'name' => $user['name']
+            ]
         ];
     }
     
     /**
-     * 임시 토큰 생성 (실제 구현에서는 JWT 사용)
-     * 
-     * @param array $user
-     * @return string
+     * JWT 토큰 생성
      */
-    private function generateToken($user) {
-        // TODO: 실제 JWT 토큰 생성 로직으로 대체
-        $payload = [
-            'sub' => $user['id'],
-            'email' => $user['email'],
-            'iat' => time(),
+    private function generateToken($userId) {
+        $header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
+        $payload = json_encode([
+            'user_id' => $userId,
             'exp' => time() + (60 * 60 * 24) // 24시간
-        ];
+        ]);
         
-        return base64_encode(json_encode($payload));
+        $base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($header));
+        $base64UrlPayload = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($payload));
+        
+        $signature = hash_hmac('sha256', $base64UrlHeader . "." . $base64UrlPayload, 'your-secret-key', true);
+        $base64UrlSignature = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($signature));
+        
+        return $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
     }
 }

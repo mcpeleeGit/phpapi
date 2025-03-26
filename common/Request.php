@@ -13,6 +13,16 @@ class Request {
     }
     
     /**
+     * 요청 파라미터 존재 여부 확인
+     * 
+     * @param string $key
+     * @return bool
+     */
+    public function has($key) {
+        return isset($this->data[$key]);
+    }
+    
+    /**
      * 요청 데이터 가져오기
      * 
      * @param string $key
@@ -128,5 +138,15 @@ class Request {
             }
         }
         return $sanitized;
+    }
+    
+    /**
+     * 요청 파라미터 값 설정
+     * 
+     * @param string $key
+     * @param mixed $value
+     */
+    public function set($key, $value) {
+        $this->data[$key] = $value;
     }
 } 
