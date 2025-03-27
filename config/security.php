@@ -19,8 +19,7 @@ return [
     
     // 보안 미들웨어 예외 경로
     'exclude_paths' => [
-        '/healthcheck/hello',
-        'api-docs.html'
+        '/healthcheck/hello'
     ],
     
     // 로그 파일 경로

@@ -5,7 +5,8 @@ class AuthMiddleware {
         '/health-check/hello',
         '/auth/signup',
         '/auth/login',
-        '/blog/list'
+        '/blog/list',
+        '/blog/detail'
     ];
     
     /**
@@ -57,7 +58,19 @@ class AuthMiddleware {
      * @return bool
      */
     private function isExcludePath($path) {
-        return in_array($path, $this->excludePaths);
+        foreach ($this->excludePaths as $excludePath) {
+            // 와일드카드(*) 패턴 처리
+            if (strpos($excludePath, '*') !== false) {
+                $pattern = str_replace('*', '.*', $excludePath);
+                $pattern = '#^' . $pattern . '$#';
+                if (preg_match($pattern, $path)) {
+                    return true;
+                }
+            } else if ($path === $excludePath) {
+                return true;
+            }
+        }
+        return false;
     }
     
     /**

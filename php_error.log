@@ -1,449 +1,1245 @@
-[Wed Mar 26 23:31:05 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
-[Wed Mar 26 23:31:13 2025] [::1]:50179 Accepted
-[Wed Mar 26 23:31:13 2025] [2025-03-26 23:31:13] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
-
-[Wed Mar 26 23:31:13 2025] [::1]:50179 [200]: POST /auth/signup
-[Wed Mar 26 23:31:13 2025] [::1]:50179 Closing
-[Wed Mar 26 23:31:13 2025] [::1]:50186 Accepted
-[Wed Mar 26 23:31:13 2025] [2025-03-26 23:31:13] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
-
-[Wed Mar 26 23:31:14 2025] [2025-03-26 23:31:14] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":101,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"0bcc9c1c08757078e840b693e8418af3","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:31:14 2025] [::1]:50186 [401]: POST /auth/login
-[Wed Mar 26 23:31:14 2025] [::1]:50186 Closing
-[Wed Mar 26 23:34:40 2025] [::1]:51379 Accepted
-[Wed Mar 26 23:34:40 2025] [2025-03-26 23:34:40] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
-
-[Wed Mar 26 23:34:40 2025] [2025-03-26 23:34:40] INFO: Signup password hash {"email":"mcpelee@gmail.com","original_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","hashed_password":"$2y$12$2P.t3JMZ3lSMv3huY5bUtOly5M1goCUoDWLjxqMz.BAmiXN7n472y"}
-
-[Wed Mar 26 23:34:40 2025] [::1]:51379 [200]: POST /auth/signup
-[Wed Mar 26 23:34:40 2025] [::1]:51379 Closing
-[Wed Mar 26 23:34:40 2025] [::1]:51382 Accepted
-[Wed Mar 26 23:34:40 2025] [2025-03-26 23:34:40] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
-
-[Wed Mar 26 23:34:41 2025] [2025-03-26 23:34:41] INFO: Login password hash comparison {"email":"mcpelee@gmail.com","login_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","login_hashed_password":"$2y$12$20HnoLWw19Jh\/A1xi38Xg.BwGp8FcBp0LhUlznRwg0CA9y4g9n2e6","stored_hashed_password":"$2y$12$2P.t3JMZ3lSMv3huY5bUtOly5M1goCUoDWLjxqMz.BAmiXN7n472y","password_verify_result":false}
-
-[Wed Mar 26 23:34:41 2025] [2025-03-26 23:34:41] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"b069004eacb7ed23e4b7705d98168c08","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:34:41 2025] [::1]:51382 [401]: POST /auth/login
-[Wed Mar 26 23:34:41 2025] [::1]:51382 Closing
-[Wed Mar 26 23:35:31 2025] [::1]:51600 Accepted
-[Wed Mar 26 23:35:31 2025] [2025-03-26 23:35:31] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
-
-[Wed Mar 26 23:35:31 2025] [2025-03-26 23:35:31] INFO: Signup password hash {"email":"mcpelee@gmail.com","original_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","hashed_password":"$2y$12$VJxEd9AKC3Iduc4aJh0zo.k1e9boYqaRZwrVA6crTJCMAHq0hvxGm"}
-
-[Wed Mar 26 23:35:31 2025] [::1]:51600 [200]: POST /auth/signup
-[Wed Mar 26 23:35:31 2025] [::1]:51600 Closing
-[Wed Mar 26 23:35:31 2025] [::1]:51603 Accepted
-[Wed Mar 26 23:35:31 2025] [2025-03-26 23:35:31] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
-
-[Wed Mar 26 23:35:32 2025] [2025-03-26 23:35:32] INFO: Login password hash comparison {"email":"mcpelee@gmail.com","login_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","login_hashed_password":"$2y$12$8G3jHfTEBZ\/I4WnZLCPlEOz4CvCyxa7wiEx.aRUvUYTuWBifvhBFe","stored_hashed_password":"$2y$12$VJxEd9AKC3Iduc4aJh0zo.k1e9boYqaRZwrVA6crTJCMAHq0hvxGm","password_verify_result":false}
-
-[Wed Mar 26 23:35:32 2025] [2025-03-26 23:35:32] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"f10c8873178384f9bececd521b47d4a0","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:35:32 2025] [::1]:51603 [401]: POST /auth/login
-[Wed Mar 26 23:35:32 2025] [::1]:51603 Closing
-[Wed Mar 26 23:37:00 2025] [::1]:52012 Accepted
-[Wed Mar 26 23:37:00 2025] [2025-03-26 23:37:00] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
-
-[Wed Mar 26 23:37:00 2025] [2025-03-26 23:37:00] INFO: Signup password hash {"email":"mcpelee@gmail.com","original_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","hashed_password":"$2y$12$vRPqlOPAqywZBuPRZxZWaOwTfkTTGOAmK\/U9QNvU8lzRDxurxJMd2"}
-
-[Wed Mar 26 23:37:00 2025] [::1]:52012 [200]: POST /auth/signup
-[Wed Mar 26 23:37:00 2025] [::1]:52012 Closing
-[Wed Mar 26 23:37:00 2025] [::1]:52015 Accepted
-[Wed Mar 26 23:37:00 2025] [2025-03-26 23:37:00] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
-
-[Wed Mar 26 23:37:00 2025] [::1]:52015 [200]: POST /auth/login
-[Wed Mar 26 23:37:00 2025] [::1]:52015 Closing
-[Wed Mar 26 23:39:21 2025] [::1]:52835 Accepted
-[Wed Mar 26 23:39:21 2025] [2025-03-26 23:39:21] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
-
-[Wed Mar 26 23:39:21 2025] [2025-03-26 23:39:21] INFO: Signup password hash {"email":"mcpelee@hotmail.com","original_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","hashed_password":"$2y$12$I5Pj1oZb596VebgojiKMvulalXzpN7vQcmTv9wkPcDaednKufIyVm"}
-
-[Wed Mar 26 23:39:21 2025] [::1]:52835 [200]: POST /auth/signup
-[Wed Mar 26 23:39:21 2025] [::1]:52835 Closing
-[Wed Mar 26 23:39:21 2025] [::1]:52838 Accepted
-[Wed Mar 26 23:39:21 2025] [2025-03-26 23:39:21] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
-
-[Wed Mar 26 23:39:22 2025] [::1]:52838 [200]: POST /auth/login
-[Wed Mar 26 23:39:22 2025] [::1]:52838 Closing
-[Wed Mar 26 23:39:27 2025] [::1]:52866 Accepted
-[Wed Mar 26 23:39:27 2025] [2025-03-26 23:39:27] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:39:27 2025] [2025-03-26 23:39:27] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":106,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"109","X-Security-Token":"a78440fa3bbd779ac2208b9d6fb5fa86","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:39:27 2025] [::1]:52866 [401]: POST /auth/login
-[Wed Mar 26 23:39:27 2025] [::1]:52866 Closing
-[Wed Mar 26 23:39:45 2025] [::1]:52941 Accepted
-[Wed Mar 26 23:39:45 2025] [2025-03-26 23:39:45] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:39:45 2025] [2025-03-26 23:39:45] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":106,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"109","X-Security-Token":"cb69bbae7f157c03e15a5272184f474b","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:39:45 2025] [::1]:52941 [401]: POST /auth/login
-[Wed Mar 26 23:39:45 2025] [::1]:52941 Closing
-[Wed Mar 26 23:39:48 2025] [::1]:52961 Accepted
-[Wed Mar 26 23:39:48 2025] [2025-03-26 23:39:48] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:39:49 2025] [2025-03-26 23:39:49] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":106,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"414d3a76651da5ac4c0f7965cb1d7a16","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:39:49 2025] [::1]:52961 [401]: POST /auth/login
-[Wed Mar 26 23:39:49 2025] [::1]:52961 Closing
-[Wed Mar 26 23:40:03 2025] [::1]:53023 Accepted
-[Wed Mar 26 23:40:03 2025] [2025-03-26 23:40:03] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:40:03 2025] [2025-03-26 23:40:03] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":106,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"f1d14b83239c21b439f74d8bdde502fc","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:40:03 2025] [::1]:53023 [401]: POST /auth/login
-[Wed Mar 26 23:40:03 2025] [::1]:53023 Closing
-[Wed Mar 26 23:40:52 2025] [::1]:53234 Accepted
-[Wed Mar 26 23:40:52 2025] [2025-03-26 23:40:52] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
-
-[Wed Mar 26 23:40:52 2025] [2025-03-26 23:40:52] INFO: Signup password hash {"email":"mcpelee@gmail.com","original_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","hashed_password":"$2y$12$iHCHN0udSGQDLt.aR2rnIegpbQGHPg8Vp6UsPtIQIhlthnor5W5e."}
-
-[Wed Mar 26 23:40:52 2025] [::1]:53234 [200]: POST /auth/signup
-[Wed Mar 26 23:40:52 2025] [::1]:53234 Closing
-[Wed Mar 26 23:40:52 2025] [::1]:53237 Accepted
-[Wed Mar 26 23:40:52 2025] [2025-03-26 23:40:52] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
-
-[Wed Mar 26 23:40:52 2025] [::1]:53237 [200]: POST /auth/login
-[Wed Mar 26 23:40:52 2025] [::1]:53237 Closing
-[Wed Mar 26 23:41:14 2025] [::1]:53332 Accepted
-[Wed Mar 26 23:41:14 2025] [2025-03-26 23:41:14] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:41:15 2025] [2025-03-26 23:41:15] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":106,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"508b0e82bac0629619b7899093b70fd9","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:41:15 2025] [::1]:53332 [401]: POST /auth/login
-[Wed Mar 26 23:41:15 2025] [::1]:53332 Closing
-[Wed Mar 26 23:42:08 2025] [::1]:53602 Accepted
-[Wed Mar 26 23:42:08 2025] [2025-03-26 23:42:08] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:42:08 2025] [2025-03-26 23:42:08] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$iHCHN0udSGQDLt.aR2rnIegpbQGHPg8Vp6UsPtIQIhlthnor5W5e.","password_verify_result":false}
-
-[Wed Mar 26 23:42:09 2025] [2025-03-26 23:42:09] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":114,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"d6eb2ff5de889f36f4d256ea8fb993b9","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:42:09 2025] [::1]:53602 [401]: POST /auth/login
-[Wed Mar 26 23:42:09 2025] [::1]:53602 Closing
-[Wed Mar 26 23:43:47 2025] [::1]:54074 Accepted
-[Wed Mar 26 23:43:47 2025] [2025-03-26 23:43:47] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
-
-[Wed Mar 26 23:43:47 2025] [2025-03-26 23:43:47] INFO: Signup password hash {"email":"mcpelee@gmail.com","original_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","hashed_password":"$2y$12$Y19WRKw\/JRyuMiCGNachAO7WY3dXm3AAW22S2pSXzDZE4pF734XHu"}
-
-[Wed Mar 26 23:43:47 2025] [::1]:54074 [200]: POST /auth/signup
-[Wed Mar 26 23:43:47 2025] [::1]:54074 Closing
-[Wed Mar 26 23:43:47 2025] [::1]:54077 Accepted
-[Wed Mar 26 23:43:47 2025] [2025-03-26 23:43:47] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
-
-[Wed Mar 26 23:43:48 2025] [2025-03-26 23:43:48] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","stored_hashed_password":"$2y$12$Y19WRKw\/JRyuMiCGNachAO7WY3dXm3AAW22S2pSXzDZE4pF734XHu","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:43:48 2025] [::1]:54077 [200]: POST /auth/login
-[Wed Mar 26 23:43:48 2025] [::1]:54077 Closing
-[Wed Mar 26 23:44:11 2025] [::1]:54179 Accepted
-[Wed Mar 26 23:44:11 2025] [2025-03-26 23:44:11] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:44:12 2025] [2025-03-26 23:44:12] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$Y19WRKw\/JRyuMiCGNachAO7WY3dXm3AAW22S2pSXzDZE4pF734XHu","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:44:12 2025] [2025-03-26 23:44:12] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"f4e62974880178e21420826f03c82c13","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:44:12 2025] [::1]:54179 [401]: POST /auth/login
-[Wed Mar 26 23:44:12 2025] [::1]:54179 Closing
-[Wed Mar 26 23:44:58 2025] [::1]:54417 Accepted
-[Wed Mar 26 23:44:58 2025] [2025-03-26 23:44:58] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:44:58 2025] [2025-03-26 23:44:58] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$Y19WRKw\/JRyuMiCGNachAO7WY3dXm3AAW22S2pSXzDZE4pF734XHu","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:44:58 2025] [2025-03-26 23:44:58] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"e86586ac381c6c3ab4f044e96e972ab3","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:44:58 2025] [::1]:54417 [401]: POST /auth/login
-[Wed Mar 26 23:44:58 2025] [::1]:54417 Closing
-[Wed Mar 26 23:45:01 2025] [::1]:54432 Accepted
-[Wed Mar 26 23:45:01 2025] [2025-03-26 23:45:01] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:45:01 2025] [2025-03-26 23:45:01] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$Y19WRKw\/JRyuMiCGNachAO7WY3dXm3AAW22S2pSXzDZE4pF734XHu","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:45:01 2025] [2025-03-26 23:45:01] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"de83a916b0f98c694278641e18b00556","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:45:01 2025] [::1]:54432 [401]: POST /auth/login
-[Wed Mar 26 23:45:01 2025] [::1]:54432 Closing
-[Wed Mar 26 23:45:03 2025] [::1]:54443 Accepted
-[Wed Mar 26 23:45:03 2025] [2025-03-26 23:45:03] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:45:03 2025] [2025-03-26 23:45:03] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$Y19WRKw\/JRyuMiCGNachAO7WY3dXm3AAW22S2pSXzDZE4pF734XHu","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:45:03 2025] [2025-03-26 23:45:03] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"7f3dc4032912f5de2d1b6c956570a5b0","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:45:03 2025] [::1]:54443 [401]: POST /auth/login
-[Wed Mar 26 23:45:03 2025] [::1]:54443 Closing
-[Wed Mar 26 23:45:23 2025] [::1]:54536 Accepted
-[Wed Mar 26 23:45:23 2025] [2025-03-26 23:45:23] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
-
-[Wed Mar 26 23:45:24 2025] [2025-03-26 23:45:24] INFO: Signup password hash {"email":"mcpelee@gmail.com","original_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","hashed_password":"$2y$12$oC2e17HYVaoVWYIIYMM8b.XrqTG.WPQ9n4hv\/Mbm6ftl4CmQPMSpq"}
-
-[Wed Mar 26 23:45:24 2025] [::1]:54536 [200]: POST /auth/signup
-[Wed Mar 26 23:45:24 2025] [::1]:54536 Closing
-[Wed Mar 26 23:45:24 2025] [::1]:54539 Accepted
-[Wed Mar 26 23:45:24 2025] [2025-03-26 23:45:24] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
-
-[Wed Mar 26 23:45:24 2025] [2025-03-26 23:45:24] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","stored_hashed_password":"$2y$12$oC2e17HYVaoVWYIIYMM8b.XrqTG.WPQ9n4hv\/Mbm6ftl4CmQPMSpq","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:45:24 2025] [::1]:54539 [200]: POST /auth/login
-[Wed Mar 26 23:45:24 2025] [::1]:54539 Closing
-[Wed Mar 26 23:45:26 2025] [::1]:54550 Accepted
-[Wed Mar 26 23:45:26 2025] [2025-03-26 23:45:26] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:45:26 2025] [2025-03-26 23:45:26] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$oC2e17HYVaoVWYIIYMM8b.XrqTG.WPQ9n4hv\/Mbm6ftl4CmQPMSpq","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:45:26 2025] [2025-03-26 23:45:26] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"64f05edc8089b1847ec90925bf213881","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:45:26 2025] [::1]:54550 [401]: POST /auth/login
-[Wed Mar 26 23:45:26 2025] [::1]:54550 Closing
-[Wed Mar 26 23:46:31 2025] [::1]:54888 Accepted
-[Wed Mar 26 23:46:31 2025] [2025-03-26 23:46:31] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
-
-[Wed Mar 26 23:46:31 2025] [2025-03-26 23:46:31] INFO: Signup password hash {"email":"mcpelee@gmail.com","original_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","hashed_password":"$2y$12$jhNR3W0fOCoKxexEojVg3uwReId3my0WXGPCJ.vo0GDhB3IuTHC32"}
-
-[Wed Mar 26 23:46:31 2025] [::1]:54888 [200]: POST /auth/signup
-[Wed Mar 26 23:46:31 2025] [::1]:54888 Closing
-[Wed Mar 26 23:46:31 2025] [::1]:54891 Accepted
-[Wed Mar 26 23:46:31 2025] [2025-03-26 23:46:31] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
-
-[Wed Mar 26 23:46:31 2025] [2025-03-26 23:46:31] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","stored_hashed_password":"$2y$12$jhNR3W0fOCoKxexEojVg3uwReId3my0WXGPCJ.vo0GDhB3IuTHC32","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:46:32 2025] [::1]:54891 [200]: POST /auth/login
-[Wed Mar 26 23:46:32 2025] [::1]:54891 Closing
-[Wed Mar 26 23:46:34 2025] [::1]:54906 Accepted
-[Wed Mar 26 23:46:34 2025] [2025-03-26 23:46:34] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:46:35 2025] [2025-03-26 23:46:35] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$jhNR3W0fOCoKxexEojVg3uwReId3my0WXGPCJ.vo0GDhB3IuTHC32","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:46:35 2025] [2025-03-26 23:46:35] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"2c7969d47356f4a2b3bc76f7c50253d3","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:46:35 2025] [::1]:54906 [401]: POST /auth/login
-[Wed Mar 26 23:46:35 2025] [::1]:54906 Closing
-[Wed Mar 26 23:47:50 2025] [::1]:55409 Accepted
-[Wed Mar 26 23:47:50 2025] [2025-03-26 23:47:50] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:47:50 2025] [2025-03-26 23:47:50] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$jhNR3W0fOCoKxexEojVg3uwReId3my0WXGPCJ.vo0GDhB3IuTHC32","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:47:51 2025] [2025-03-26 23:47:51] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"117eba8d610941937ee1a2e750da04a1","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:47:51 2025] [::1]:55409 [401]: POST /auth/login
-[Wed Mar 26 23:47:51 2025] [::1]:55409 Closing
-[Wed Mar 26 23:47:52 2025] [::1]:55420 Accepted
-[Wed Mar 26 23:47:52 2025] [2025-03-26 23:47:52] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:47:52 2025] [2025-03-26 23:47:52] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$jhNR3W0fOCoKxexEojVg3uwReId3my0WXGPCJ.vo0GDhB3IuTHC32","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:47:52 2025] [2025-03-26 23:47:52] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"18bb8282faa6c00760dfd6b12e60afeb","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:47:52 2025] [::1]:55420 [401]: POST /auth/login
-[Wed Mar 26 23:47:52 2025] [::1]:55420 Closing
-[Wed Mar 26 23:48:10 2025] [::1]:55500 Accepted
-[Wed Mar 26 23:48:10 2025] [2025-03-26 23:48:10] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@tmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\",\"name\":\"Dong-Ha Lee\"}"}
-
-[Wed Mar 26 23:48:10 2025] [2025-03-26 23:48:10] INFO: Signup password hash {"email":"mcpelee@tmail.com","original_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","hashed_password":"$2y$12$GixWKPBjEd7ft1KBfvLWo.2FknntzubNINCD\/NDJQZHMuNqWXFjRq"}
-
-[Wed Mar 26 23:48:10 2025] [::1]:55500 [200]: POST /auth/signup
-[Wed Mar 26 23:48:10 2025] [::1]:55500 Closing
-[Wed Mar 26 23:48:10 2025] [::1]:55507 Accepted
-[Wed Mar 26 23:48:10 2025] [2025-03-26 23:48:10] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@tmail.com\",\"password\":\"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc\"}"}
-
-[Wed Mar 26 23:48:10 2025] [2025-03-26 23:48:10] INFO: Login password verification {"email":"mcpelee@tmail.com","login_password":"9301126666cd7eb7bf0c9021aba56352c24f1f6b29675fe4e3aef5a5852d4cbc","stored_hashed_password":"$2y$12$GixWKPBjEd7ft1KBfvLWo.2FknntzubNINCD\/NDJQZHMuNqWXFjRq","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:48:10 2025] [::1]:55507 [200]: POST /auth/login
-[Wed Mar 26 23:48:10 2025] [::1]:55507 Closing
-[Wed Mar 26 23:48:15 2025] [::1]:55530 Accepted
-[Wed Mar 26 23:48:15 2025] [2025-03-26 23:48:15] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:48:15 2025] [2025-03-26 23:48:15] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$jhNR3W0fOCoKxexEojVg3uwReId3my0WXGPCJ.vo0GDhB3IuTHC32","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:48:16 2025] [2025-03-26 23:48:16] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"59d68ee83569310565c3c3c0c078576e","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:48:16 2025] [::1]:55530 [401]: POST /auth/login
-[Wed Mar 26 23:48:16 2025] [::1]:55530 Closing
-[Wed Mar 26 23:49:21 2025] [::1]:55894 Accepted
-[Wed Mar 26 23:49:21 2025] [2025-03-26 23:49:21] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:49:21 2025] [2025-03-26 23:49:21] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$jhNR3W0fOCoKxexEojVg3uwReId3my0WXGPCJ.vo0GDhB3IuTHC32","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:49:22 2025] [2025-03-26 23:49:22] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"8470d81118551d6be7e2124be08e7f4f","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:49:22 2025] [::1]:55894 [401]: POST /auth/login
-[Wed Mar 26 23:49:22 2025] [::1]:55894 Closing
-[Wed Mar 26 23:49:27 2025] [::1]:55922 Accepted
-[Wed Mar 26 23:49:27 2025] [2025-03-26 23:49:27] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:49:28 2025] [2025-03-26 23:49:28] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$jhNR3W0fOCoKxexEojVg3uwReId3my0WXGPCJ.vo0GDhB3IuTHC32","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:49:28 2025] [2025-03-26 23:49:28] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"438aed299d421bbe88ed7f849d4492d9","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:49:28 2025] [::1]:55922 [401]: POST /auth/login
-[Wed Mar 26 23:49:28 2025] [::1]:55922 Closing
-[Wed Mar 26 23:49:37 2025] [::1]:55972 Accepted
-[Wed Mar 26 23:49:37 2025] [2025-03-26 23:49:37] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:49:37 2025] [2025-03-26 23:49:37] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$jhNR3W0fOCoKxexEojVg3uwReId3my0WXGPCJ.vo0GDhB3IuTHC32","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:49:37 2025] [2025-03-26 23:49:37] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"f3240999c814e99bf73c55cc59971001","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:49:37 2025] [::1]:55972 [401]: POST /auth/login
-[Wed Mar 26 23:49:37 2025] [::1]:55972 Closing
-[Wed Mar 26 23:49:38 2025] [::1]:55983 Accepted
-[Wed Mar 26 23:49:38 2025] [2025-03-26 23:49:38] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:49:39 2025] [2025-03-26 23:49:39] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$jhNR3W0fOCoKxexEojVg3uwReId3my0WXGPCJ.vo0GDhB3IuTHC32","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:49:39 2025] [2025-03-26 23:49:39] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"107","X-Security-Token":"5c18a0609e2690c8a9ab33461150a78e","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:49:39 2025] [::1]:55983 [401]: POST /auth/login
-[Wed Mar 26 23:49:39 2025] [::1]:55983 Closing
-[Wed Mar 26 23:50:24 2025] [::1]:56281 Accepted
-[Wed Mar 26 23:50:24 2025] [2025-03-26 23:50:24] INFO: Request received {"method":"POST","path":"\/auth\/signup","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\",\"name\":\"Dong-Ha Lee\"}"}
-
-[Wed Mar 26 23:50:24 2025] [2025-03-26 23:50:24] INFO: Signup password hash {"email":"mcpelee@gmail.com","original_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS"}
-
-[Wed Mar 26 23:50:24 2025] [::1]:56281 [200]: POST /auth/signup
-[Wed Mar 26 23:50:24 2025] [::1]:56281 Closing
-[Wed Mar 26 23:50:24 2025] [::1]:56284 Accepted
-[Wed Mar 26 23:50:24 2025] [2025-03-26 23:50:24] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:50:24 2025] [2025-03-26 23:50:24] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:50:24 2025] [::1]:56284 [200]: POST /auth/login
-[Wed Mar 26 23:50:24 2025] [::1]:56284 Closing
-[Wed Mar 26 23:50:27 2025] [::1]:56304 Accepted
-[Wed Mar 26 23:50:27 2025] [2025-03-26 23:50:27] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"testtest\"}"}
-
-[Wed Mar 26 23:50:27 2025] [2025-03-26 23:50:27] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"testtest","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":false,"password_length":8,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:50:28 2025] [2025-03-26 23:50:28] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":117,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"testtest\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"51","X-Security-Token":"0a38f250e816be3f354c216349a09c39","sec-ch-ua-platform":"\"macOS\"","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","X-Requested-With":"XMLHttpRequest","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","Content-Type":"application\/json","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","Cookie":"_ga=GA1.1.1126397852.1742641197; lang=ko; _ga_0QSQ2VE1QR=GS1.1.1742641197.1.1.1742641525.0.0.0; _clck=1wv2u6l%7C2%7Cfug%7C0%7C1908; _ga_W55QLR9NQ7=GS1.1.1742773593.1.0.1742773597.56.0.0"}}}
-
-[Wed Mar 26 23:50:28 2025] [::1]:56304 [401]: POST /auth/login
-[Wed Mar 26 23:50:28 2025] [::1]:56304 Closing
-[Wed Mar 26 23:51:37 2025] [::1]:56739 Accepted
-[Wed Mar 26 23:51:37 2025] [2025-03-26 23:51:37] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:51:37 2025] [2025-03-26 23:51:37] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:51:37 2025] [::1]:56739 [200]: POST /auth/login
-[Wed Mar 26 23:51:37 2025] [::1]:56739 Closing
-[Wed Mar 26 23:51:52 2025] [::1]:56804 Accepted
-[Wed Mar 26 23:51:52 2025] [2025-03-26 23:51:52] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
-
-[Wed Mar 26 23:51:52 2025] [::1]:56804 [200]: GET /blog/list
-[Wed Mar 26 23:51:52 2025] [::1]:56804 Closing
-[Wed Mar 26 23:51:52 2025] [::1]:56807 Accepted
-[Wed Mar 26 23:51:52 2025] [2025-03-26 23:51:52] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
-
-[Wed Mar 26 23:51:52 2025] [::1]:56807 [200]: GET /blog/list
-[Wed Mar 26 23:51:52 2025] [::1]:56807 Closing
-[Wed Mar 26 23:52:16 2025] [::1]:56912 Accepted
-[Wed Mar 26 23:52:16 2025] [2025-03-26 23:52:16] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
-
-[Wed Mar 26 23:52:16 2025] [::1]:56912 [200]: GET /blog/list
-[Wed Mar 26 23:52:16 2025] [::1]:56912 Closing
-[Wed Mar 26 23:52:16 2025] [::1]:56915 Accepted
-[Wed Mar 26 23:52:16 2025] [2025-03-26 23:52:16] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
-
-[Wed Mar 26 23:52:16 2025] [::1]:56915 [200]: GET /blog/list
-[Wed Mar 26 23:52:16 2025] [::1]:56915 Closing
-[Wed Mar 26 23:52:18 2025] [::1]:56926 Accepted
-[Wed Mar 26 23:52:18 2025] [2025-03-26 23:52:18] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:52:18 2025] [2025-03-26 23:52:18] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:52:18 2025] [::1]:56926 [200]: POST /auth/login
-[Wed Mar 26 23:52:18 2025] [::1]:56926 Closing
-[Wed Mar 26 23:53:14 2025] [::1]:57191 Accepted
-[Wed Mar 26 23:53:14 2025] [2025-03-26 23:53:14] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Wed Mar 26 23:53:14 2025] [2025-03-26 23:53:14] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Wed Mar 26 23:53:14 2025] [::1]:57191 [200]: POST /auth/login
-[Wed Mar 26 23:53:14 2025] [::1]:57191 Closing
-[Thu Mar 27 00:01:35 2025] [::1]:60308 Accepted
-[Thu Mar 27 00:01:35 2025] [2025-03-27 00:01:35] INFO: Request received {"method":"OPTIONS","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:01:35 2025] [::1]:60308 [200]: OPTIONS /user/users?page=1&limit=10
-[Thu Mar 27 00:01:35 2025] [::1]:60308 Closing
-[Thu Mar 27 00:01:35 2025] [::1]:60309 Accepted
-[Thu Mar 27 00:01:35 2025] [::1]:60310 Accepted
-[Thu Mar 27 00:01:35 2025] [2025-03-27 00:01:35] INFO: Request received {"method":"OPTIONS","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:01:35 2025] [::1]:60309 [200]: OPTIONS /user/users?page=1&limit=10
-[Thu Mar 27 00:01:35 2025] [::1]:60309 Closing
-[Thu Mar 27 00:01:35 2025] [2025-03-27 00:01:35] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:01:35 2025] [::1]:60310 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:01:35 2025] [::1]:60310 Closing
-[Thu Mar 27 00:01:35 2025] [::1]:60311 Accepted
-[Thu Mar 27 00:01:35 2025] [2025-03-27 00:01:35] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:01:35 2025] [::1]:60311 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:01:35 2025] [::1]:60311 Closing
-[Thu Mar 27 00:02:10 2025] [::1]:60465 Accepted
-[Thu Mar 27 00:02:10 2025] [2025-03-27 00:02:10] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
-
-[Thu Mar 27 00:02:10 2025] [2025-03-27 00:02:10] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
-
-[Thu Mar 27 00:02:11 2025] [::1]:60465 [200]: POST /auth/login
-[Thu Mar 27 00:02:11 2025] [::1]:60465 Closing
-[Thu Mar 27 00:02:14 2025] [::1]:60484 Accepted
-[Thu Mar 27 00:02:14 2025] [2025-03-27 00:02:14] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:02:14 2025] [::1]:60484 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:02:14 2025] [::1]:60484 Closing
-[Thu Mar 27 00:02:14 2025] [::1]:60485 Accepted
-[Thu Mar 27 00:02:14 2025] [2025-03-27 00:02:14] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:02:14 2025] [::1]:60485 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:02:14 2025] [::1]:60485 Closing
-[Thu Mar 27 00:02:50 2025] [::1]:60931 Accepted
-[Thu Mar 27 00:02:50 2025] [2025-03-27 00:02:50] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:02:50 2025] [::1]:60931 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:02:50 2025] [::1]:60931 Closing
-[Thu Mar 27 00:02:50 2025] [::1]:60932 Accepted
-[Thu Mar 27 00:02:50 2025] [2025-03-27 00:02:50] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:02:50 2025] [::1]:60932 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:02:50 2025] [::1]:60932 Closing
-[Thu Mar 27 00:03:00 2025] [::1]:60978 Accepted
-[Thu Mar 27 00:03:00 2025] [2025-03-27 00:03:00] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:03:00 2025] [::1]:60978 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:03:00 2025] [::1]:60978 Closing
-[Thu Mar 27 00:03:00 2025] [::1]:60979 Accepted
-[Thu Mar 27 00:03:00 2025] [2025-03-27 00:03:00] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:03:00 2025] [::1]:60979 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:03:00 2025] [::1]:60979 Closing
-[Thu Mar 27 00:03:04 2025] [::1]:60996 Accepted
-[Thu Mar 27 00:03:04 2025] [::1]:60997 Accepted
-[Thu Mar 27 00:03:04 2025] [2025-03-27 00:03:04] INFO: Request received {"method":"OPTIONS","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:03:04 2025] [::1]:60996 [200]: OPTIONS /user/users?page=1&limit=10
-[Thu Mar 27 00:03:04 2025] [::1]:60996 Closing
-[Thu Mar 27 00:03:04 2025] [2025-03-27 00:03:04] INFO: Request received {"method":"OPTIONS","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:03:04 2025] [::1]:60997 [200]: OPTIONS /user/users?page=1&limit=10
-[Thu Mar 27 00:03:04 2025] [::1]:60997 Closing
-[Thu Mar 27 00:03:04 2025] [::1]:60998 Accepted
-[Thu Mar 27 00:03:04 2025] [2025-03-27 00:03:04] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:03:04 2025] [::1]:60998 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:03:04 2025] [::1]:60998 Closing
-[Thu Mar 27 00:03:04 2025] [::1]:60999 Accepted
-[Thu Mar 27 00:03:04 2025] [2025-03-27 00:03:04] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:03:04 2025] [::1]:60999 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:03:04 2025] [::1]:60999 Closing
-[Thu Mar 27 00:03:13 2025] [::1]:61041 Accepted
-[Thu Mar 27 00:03:13 2025] [2025-03-27 00:03:13] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:03:13 2025] [::1]:61041 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:03:13 2025] [::1]:61041 Closing
-[Thu Mar 27 00:03:13 2025] [::1]:61042 Accepted
-[Thu Mar 27 00:03:13 2025] [2025-03-27 00:03:13] INFO: Request received {"method":"GET","path":"\/user\/users","request_body":""}
-
-[Thu Mar 27 00:03:13 2025] [::1]:61042 [401]: GET /user/users?page=1&limit=10
-[Thu Mar 27 00:03:13 2025] [::1]:61042 Closing
+[Thu Mar 27 23:50:06 2025] PHP 8.4.4 Development Server (http://localhost:8000) started
+[Thu Mar 27 23:50:08 2025] [::1]:56235 Accepted
+[Thu Mar 27 23:50:08 2025] [2025-03-27 23:50:08] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Thu Mar 27 23:50:08 2025] [::1]:56235 [401]: GET /blog/detail?id=1
+[Thu Mar 27 23:50:08 2025] [::1]:56235 Closing
+[Thu Mar 27 23:50:08 2025] [::1]:56236 Accepted
+[Thu Mar 27 23:50:08 2025] [2025-03-27 23:50:08] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Thu Mar 27 23:50:08 2025] [::1]:56236 [401]: GET /blog/detail?id=1
+[Thu Mar 27 23:50:08 2025] [::1]:56236 Closing
+[Thu Mar 27 23:51:52 2025] [::1]:56688 Accepted
+[Thu Mar 27 23:51:52 2025] [2025-03-27 23:51:52] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Thu Mar 27 23:51:52 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Thu Mar 27 23:51:52 2025] Database connection successful
+[Thu Mar 27 23:51:52 2025] [::1]:56688 [200]: GET /blog/detail?id=1
+[Thu Mar 27 23:51:52 2025] [::1]:56688 Closing
+[Thu Mar 27 23:51:52 2025] [::1]:56690 Accepted
+[Thu Mar 27 23:51:52 2025] [2025-03-27 23:51:52] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Thu Mar 27 23:51:52 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Thu Mar 27 23:51:52 2025] Database connection successful
+[Thu Mar 27 23:51:52 2025] [::1]:56690 [200]: GET /blog/detail?id=1
+[Thu Mar 27 23:51:52 2025] [::1]:56690 Closing
+[Thu Mar 27 23:52:00 2025] [::1]:56726 Accepted
+[Thu Mar 27 23:52:00 2025] [2025-03-27 23:52:00] INFO: Request received {"method":"PUT","path":"\/blog\/post\/1","request_body":"{\"title\":\"새로운 블로그 게시물t\",\"content\":\"안녕하세요! 이것은 ID 14 사용자의 새로운 블로그 게시물입니다.\"}"}
+
+[Thu Mar 27 23:52:00 2025] [::1]:56726 [401]: PUT /blog/post/1
+[Thu Mar 27 23:52:00 2025] [::1]:56726 Closing
+[Thu Mar 27 23:52:09 2025] [::1]:56763 Accepted
+[Thu Mar 27 23:52:09 2025] [2025-03-27 23:52:09] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Thu Mar 27 23:52:09 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Thu Mar 27 23:52:09 2025] Database connection successful
+[Thu Mar 27 23:52:09 2025] [::1]:56763 [200]: GET /blog/list?page=1&limit=10
+[Thu Mar 27 23:52:09 2025] [::1]:56763 Closing
+[Thu Mar 27 23:52:09 2025] [::1]:56765 Accepted
+[Thu Mar 27 23:52:09 2025] [2025-03-27 23:52:09] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Thu Mar 27 23:52:09 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Thu Mar 27 23:52:09 2025] Database connection successful
+[Thu Mar 27 23:52:09 2025] [::1]:56765 [200]: GET /blog/list?page=1&limit=10
+[Thu Mar 27 23:52:09 2025] [::1]:56765 Closing
+[Thu Mar 27 23:52:16 2025] [::1]:56795 Accepted
+[Thu Mar 27 23:52:16 2025] [2025-03-27 23:52:16] INFO: Request received {"method":"POST","path":"\/blog\/post","request_body":"{\"title\":\"t\",\"content\":\"t\"}"}
+
+[Thu Mar 27 23:52:16 2025] [::1]:56795 [401]: POST /blog/post
+[Thu Mar 27 23:52:16 2025] [::1]:56795 Closing
+[Thu Mar 27 23:53:27 2025] [::1]:57114 Accepted
+[Thu Mar 27 23:53:27 2025] [::1]:57115 Accepted
+[Thu Mar 27 23:53:27 2025] [2025-03-27 23:53:27] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Thu Mar 27 23:53:27 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Thu Mar 27 23:53:27 2025] Database connection successful
+[Thu Mar 27 23:53:27 2025] [::1]:57114 [200]: GET /blog/list?page=1&limit=10
+[Thu Mar 27 23:53:27 2025] [::1]:57114 Closing
+[Thu Mar 27 23:53:27 2025] [2025-03-27 23:53:27] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Thu Mar 27 23:53:27 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Thu Mar 27 23:53:27 2025] Database connection successful
+[Thu Mar 27 23:53:27 2025] [::1]:57115 [200]: GET /blog/list?page=1&limit=10
+[Thu Mar 27 23:53:27 2025] [::1]:57115 Closing
+[Thu Mar 27 23:58:09 2025] [::1]:58303 Accepted
+[Thu Mar 27 23:58:09 2025] [::1]:58304 Accepted
+[Thu Mar 27 23:58:09 2025] [2025-03-27 23:58:09] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Thu Mar 27 23:58:09 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Thu Mar 27 23:58:09 2025] Database connection successful
+[Thu Mar 27 23:58:09 2025] [::1]:58303 [200]: GET /blog/list?page=1&limit=10
+[Thu Mar 27 23:58:09 2025] [::1]:58303 Closing
+[Thu Mar 27 23:58:09 2025] [2025-03-27 23:58:09] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Thu Mar 27 23:58:09 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Thu Mar 27 23:58:09 2025] Database connection successful
+[Thu Mar 27 23:58:09 2025] [::1]:58304 [200]: GET /blog/list?page=1&limit=10
+[Thu Mar 27 23:58:09 2025] [::1]:58304 Closing
+[Thu Mar 27 23:58:12 2025] [::1]:58319 Accepted
+[Thu Mar 27 23:58:12 2025] [2025-03-27 23:58:12] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Thu Mar 27 23:58:12 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Thu Mar 27 23:58:12 2025] Database connection successful
+[Thu Mar 27 23:58:12 2025] [2025-03-27 23:58:12] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Thu Mar 27 23:58:12 2025] [::1]:58319 [200]: POST /auth/login
+[Thu Mar 27 23:58:12 2025] [::1]:58319 Closing
+[Thu Mar 27 23:58:16 2025] [::1]:58337 Accepted
+[Thu Mar 27 23:58:16 2025] [2025-03-27 23:58:16] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Thu Mar 27 23:58:16 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Thu Mar 27 23:58:16 2025] Database connection successful
+[Thu Mar 27 23:58:16 2025] [::1]:58337 [200]: GET /blog/list?page=1&limit=10
+[Thu Mar 27 23:58:16 2025] [::1]:58337 Closing
+[Thu Mar 27 23:58:16 2025] [::1]:58339 Accepted
+[Thu Mar 27 23:58:16 2025] [2025-03-27 23:58:16] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Thu Mar 27 23:58:16 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Thu Mar 27 23:58:16 2025] Database connection successful
+[Thu Mar 27 23:58:16 2025] [::1]:58339 [200]: GET /blog/list?page=1&limit=10
+[Thu Mar 27 23:58:16 2025] [::1]:58339 Closing
+[Fri Mar 28 00:01:09 2025] [::1]:59168 Accepted
+[Fri Mar 28 00:01:09 2025] [2025-03-28 00:01:09] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Fri Mar 28 00:01:09 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:01:09 2025] Database connection successful
+[Fri Mar 28 00:01:09 2025] [2025-03-28 00:01:09] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Fri Mar 28 00:01:09 2025] [::1]:59168 [200]: POST /auth/login
+[Fri Mar 28 00:01:09 2025] [::1]:59168 Closing
+[Fri Mar 28 00:01:11 2025] [::1]:59178 Accepted
+[Fri Mar 28 00:01:11 2025] [2025-03-28 00:01:11] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:01:11 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:01:11 2025] Database connection successful
+[Fri Mar 28 00:01:11 2025] [::1]:59178 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:01:11 2025] [::1]:59178 Closing
+[Fri Mar 28 00:01:11 2025] [::1]:59180 Accepted
+[Fri Mar 28 00:01:11 2025] [2025-03-28 00:01:11] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:01:11 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:01:11 2025] Database connection successful
+[Fri Mar 28 00:01:11 2025] [::1]:59180 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:01:11 2025] [::1]:59180 Closing
+[Fri Mar 28 00:02:36 2025] [::1]:59554 Accepted
+[Fri Mar 28 00:02:36 2025] [::1]:59555 Accepted
+[Fri Mar 28 00:02:36 2025] [2025-03-28 00:02:36] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:02:36 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:02:36 2025] Database connection successful
+[Fri Mar 28 00:02:36 2025] [::1]:59554 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:02:36 2025] [::1]:59554 Closing
+[Fri Mar 28 00:02:36 2025] [2025-03-28 00:02:36] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:02:36 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:02:36 2025] Database connection successful
+[Fri Mar 28 00:02:36 2025] [::1]:59555 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:02:36 2025] [::1]:59555 Closing
+[Fri Mar 28 00:04:42 2025] [::1]:60143 Accepted
+[Fri Mar 28 00:04:42 2025] [::1]:60144 Accepted
+[Fri Mar 28 00:04:42 2025] [2025-03-28 00:04:42] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:04:42 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:04:42 2025] Database connection successful
+[Fri Mar 28 00:04:42 2025] [::1]:60143 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:04:42 2025] [::1]:60143 Closing
+[Fri Mar 28 00:04:42 2025] [2025-03-28 00:04:42] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:04:42 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:04:42 2025] Database connection successful
+[Fri Mar 28 00:04:42 2025] [::1]:60144 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:04:42 2025] [::1]:60144 Closing
+[Fri Mar 28 00:05:15 2025] [::1]:60313 Accepted
+[Fri Mar 28 00:05:15 2025] [::1]:60314 Accepted
+[Fri Mar 28 00:05:15 2025] [2025-03-28 00:05:15] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:05:15 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:05:15 2025] Database connection successful
+[Fri Mar 28 00:05:15 2025] [::1]:60313 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:05:15 2025] [::1]:60313 Closing
+[Fri Mar 28 00:05:15 2025] [2025-03-28 00:05:15] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:05:15 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:05:15 2025] Database connection successful
+[Fri Mar 28 00:05:15 2025] [::1]:60314 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:05:15 2025] [::1]:60314 Closing
+[Fri Mar 28 00:05:26 2025] [::1]:60369 Accepted
+[Fri Mar 28 00:05:26 2025] [::1]:60370 Accepted
+[Fri Mar 28 00:05:26 2025] [2025-03-28 00:05:26] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:05:26 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:05:26 2025] Database connection successful
+[Fri Mar 28 00:05:26 2025] [::1]:60369 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:05:26 2025] [::1]:60369 Closing
+[Fri Mar 28 00:05:26 2025] [2025-03-28 00:05:26] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:05:26 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:05:26 2025] Database connection successful
+[Fri Mar 28 00:05:26 2025] [::1]:60370 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:05:26 2025] [::1]:60370 Closing
+[Fri Mar 28 00:06:35 2025] [::1]:60667 Accepted
+[Fri Mar 28 00:06:35 2025] [::1]:60668 Accepted
+[Fri Mar 28 00:06:35 2025] [2025-03-28 00:06:35] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:06:35 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:06:35 2025] Database connection successful
+[Fri Mar 28 00:06:35 2025] [::1]:60667 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:06:35 2025] [::1]:60667 Closing
+[Fri Mar 28 00:06:35 2025] [2025-03-28 00:06:35] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:06:35 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:06:35 2025] Database connection successful
+[Fri Mar 28 00:06:35 2025] [::1]:60668 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:06:35 2025] [::1]:60668 Closing
+[Fri Mar 28 00:07:32 2025] [::1]:60946 Accepted
+[Fri Mar 28 00:07:32 2025] [::1]:60947 Accepted
+[Fri Mar 28 00:07:32 2025] [2025-03-28 00:07:32] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:07:32 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:07:32 2025] Database connection successful
+[Fri Mar 28 00:07:32 2025] [::1]:60946 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:07:32 2025] [::1]:60946 Closing
+[Fri Mar 28 00:07:32 2025] [2025-03-28 00:07:32] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:07:32 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:07:32 2025] Database connection successful
+[Fri Mar 28 00:07:32 2025] [::1]:60947 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:07:32 2025] [::1]:60947 Closing
+[Fri Mar 28 00:07:33 2025] [::1]:60952 Accepted
+[Fri Mar 28 00:07:33 2025] [::1]:60953 Accepted
+[Fri Mar 28 00:07:33 2025] [2025-03-28 00:07:33] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:07:33 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:07:33 2025] Database connection successful
+[Fri Mar 28 00:07:33 2025] [::1]:60952 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:07:33 2025] [::1]:60952 Closing
+[Fri Mar 28 00:07:33 2025] [2025-03-28 00:07:33] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:07:33 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:07:33 2025] Database connection successful
+[Fri Mar 28 00:07:33 2025] [::1]:60953 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:07:33 2025] [::1]:60953 Closing
+[Fri Mar 28 00:07:33 2025] [::1]:60962 Accepted
+[Fri Mar 28 00:07:33 2025] [::1]:60963 Accepted
+[Fri Mar 28 00:07:33 2025] [2025-03-28 00:07:33] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:07:33 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:07:33 2025] Database connection successful
+[Fri Mar 28 00:07:33 2025] [::1]:60962 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:07:33 2025] [::1]:60962 Closing
+[Fri Mar 28 00:07:33 2025] [2025-03-28 00:07:33] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:07:33 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:07:33 2025] Database connection successful
+[Fri Mar 28 00:07:33 2025] [::1]:60963 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:07:33 2025] [::1]:60963 Closing
+[Fri Mar 28 00:07:34 2025] [::1]:60968 Accepted
+[Fri Mar 28 00:07:34 2025] [::1]:60969 Accepted
+[Fri Mar 28 00:07:34 2025] [2025-03-28 00:07:34] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:07:34 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:07:34 2025] Database connection successful
+[Fri Mar 28 00:07:34 2025] [::1]:60968 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:07:34 2025] [::1]:60968 Closing
+[Fri Mar 28 00:07:34 2025] [2025-03-28 00:07:34] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:07:34 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:07:34 2025] Database connection successful
+[Fri Mar 28 00:07:34 2025] [::1]:60969 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:07:34 2025] [::1]:60969 Closing
+[Fri Mar 28 00:07:38 2025] [::1]:60990 Accepted
+[Fri Mar 28 00:07:38 2025] [2025-03-28 00:07:38] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Fri Mar 28 00:07:38 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:07:38 2025] Database connection successful
+[Fri Mar 28 00:07:38 2025] [2025-03-28 00:07:38] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Fri Mar 28 00:07:38 2025] [::1]:60990 [200]: POST /auth/login
+[Fri Mar 28 00:07:38 2025] [::1]:60990 Closing
+[Fri Mar 28 00:07:40 2025] [::1]:61000 Accepted
+[Fri Mar 28 00:07:40 2025] [2025-03-28 00:07:40] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:07:40 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:07:40 2025] Database connection successful
+[Fri Mar 28 00:07:40 2025] [::1]:61000 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:07:40 2025] [::1]:61000 Closing
+[Fri Mar 28 00:07:40 2025] [::1]:61002 Accepted
+[Fri Mar 28 00:07:40 2025] [2025-03-28 00:07:40] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:07:40 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:07:40 2025] Database connection successful
+[Fri Mar 28 00:07:40 2025] [::1]:61002 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:07:40 2025] [::1]:61002 Closing
+[Fri Mar 28 00:08:33 2025] [::1]:61246 Accepted
+[Fri Mar 28 00:08:33 2025] [::1]:61247 Accepted
+[Fri Mar 28 00:08:33 2025] [2025-03-28 00:08:33] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:08:33 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:08:33 2025] Database connection successful
+[Fri Mar 28 00:08:33 2025] [::1]:61246 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:08:33 2025] [::1]:61246 Closing
+[Fri Mar 28 00:08:33 2025] [2025-03-28 00:08:33] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:08:33 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:08:33 2025] Database connection successful
+[Fri Mar 28 00:08:33 2025] [::1]:61247 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:08:33 2025] [::1]:61247 Closing
+[Fri Mar 28 00:08:34 2025] [::1]:61256 Accepted
+[Fri Mar 28 00:08:34 2025] [::1]:61257 Accepted
+[Fri Mar 28 00:08:34 2025] [2025-03-28 00:08:34] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:08:34 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:08:34 2025] Database connection successful
+[Fri Mar 28 00:08:34 2025] [::1]:61256 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:08:34 2025] [::1]:61256 Closing
+[Fri Mar 28 00:08:34 2025] [2025-03-28 00:08:34] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:08:34 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:08:34 2025] Database connection successful
+[Fri Mar 28 00:08:34 2025] [::1]:61257 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:08:34 2025] [::1]:61257 Closing
+[Fri Mar 28 00:09:40 2025] [::1]:61551 Accepted
+[Fri Mar 28 00:09:40 2025] [::1]:61552 Accepted
+[Fri Mar 28 00:09:40 2025] [2025-03-28 00:09:40] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:09:40 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:09:40 2025] Database connection successful
+[Fri Mar 28 00:09:40 2025] [::1]:61551 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:09:40 2025] [::1]:61551 Closing
+[Fri Mar 28 00:09:40 2025] [2025-03-28 00:09:40] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:09:40 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:09:40 2025] Database connection successful
+[Fri Mar 28 00:09:40 2025] [::1]:61552 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:09:40 2025] [::1]:61552 Closing
+[Fri Mar 28 00:10:37 2025] [::1]:61820 Accepted
+[Fri Mar 28 00:10:37 2025] [::1]:61821 Accepted
+[Fri Mar 28 00:10:37 2025] [2025-03-28 00:10:37] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:10:37 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:10:37 2025] Database connection successful
+[Fri Mar 28 00:10:37 2025] [::1]:61820 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:10:37 2025] [::1]:61820 Closing
+[Fri Mar 28 00:10:37 2025] [2025-03-28 00:10:37] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:10:37 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:10:37 2025] Database connection successful
+[Fri Mar 28 00:10:37 2025] [::1]:61821 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:10:37 2025] [::1]:61821 Closing
+[Fri Mar 28 00:11:25 2025] [::1]:62046 Accepted
+[Fri Mar 28 00:11:25 2025] [::1]:62047 Accepted
+[Fri Mar 28 00:11:25 2025] [2025-03-28 00:11:25] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:25 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:25 2025] Database connection successful
+[Fri Mar 28 00:11:25 2025] [::1]:62046 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:25 2025] [::1]:62046 Closing
+[Fri Mar 28 00:11:25 2025] [2025-03-28 00:11:25] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:25 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:25 2025] Database connection successful
+[Fri Mar 28 00:11:25 2025] [::1]:62047 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:25 2025] [::1]:62047 Closing
+[Fri Mar 28 00:11:28 2025] [::1]:62068 Accepted
+[Fri Mar 28 00:11:28 2025] [2025-03-28 00:11:28] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Fri Mar 28 00:11:28 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:28 2025] Database connection successful
+[Fri Mar 28 00:11:28 2025] [2025-03-28 00:11:28] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Fri Mar 28 00:11:29 2025] [::1]:62068 [200]: POST /auth/login
+[Fri Mar 28 00:11:29 2025] [::1]:62068 Closing
+[Fri Mar 28 00:11:30 2025] [::1]:62078 Accepted
+[Fri Mar 28 00:11:30 2025] [2025-03-28 00:11:30] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:30 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:30 2025] Database connection successful
+[Fri Mar 28 00:11:30 2025] [::1]:62078 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:30 2025] [::1]:62078 Closing
+[Fri Mar 28 00:11:30 2025] [::1]:62080 Accepted
+[Fri Mar 28 00:11:30 2025] [2025-03-28 00:11:30] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:30 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:30 2025] Database connection successful
+[Fri Mar 28 00:11:30 2025] [::1]:62080 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:30 2025] [::1]:62080 Closing
+[Fri Mar 28 00:11:42 2025] [::1]:62130 Accepted
+[Fri Mar 28 00:11:42 2025] [::1]:62131 Accepted
+[Fri Mar 28 00:11:42 2025] [2025-03-28 00:11:42] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:42 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:42 2025] Database connection successful
+[Fri Mar 28 00:11:42 2025] [::1]:62130 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:42 2025] [::1]:62130 Closing
+[Fri Mar 28 00:11:42 2025] [2025-03-28 00:11:42] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:42 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:42 2025] Database connection successful
+[Fri Mar 28 00:11:42 2025] [::1]:62131 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:42 2025] [::1]:62131 Closing
+[Fri Mar 28 00:11:42 2025] [::1]:62140 Accepted
+[Fri Mar 28 00:11:42 2025] [::1]:62141 Accepted
+[Fri Mar 28 00:11:42 2025] [2025-03-28 00:11:42] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:42 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:42 2025] Database connection successful
+[Fri Mar 28 00:11:42 2025] [::1]:62140 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:42 2025] [::1]:62140 Closing
+[Fri Mar 28 00:11:42 2025] [2025-03-28 00:11:42] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:42 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:42 2025] Database connection successful
+[Fri Mar 28 00:11:42 2025] [::1]:62141 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:42 2025] [::1]:62141 Closing
+[Fri Mar 28 00:11:43 2025] [::1]:62146 Accepted
+[Fri Mar 28 00:11:43 2025] [::1]:62147 Accepted
+[Fri Mar 28 00:11:43 2025] [2025-03-28 00:11:43] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:43 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:43 2025] Database connection successful
+[Fri Mar 28 00:11:43 2025] [::1]:62146 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:43 2025] [::1]:62146 Closing
+[Fri Mar 28 00:11:43 2025] [2025-03-28 00:11:43] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:43 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:43 2025] Database connection successful
+[Fri Mar 28 00:11:43 2025] [::1]:62147 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:43 2025] [::1]:62147 Closing
+[Fri Mar 28 00:11:52 2025] [::1]:62205 Accepted
+[Fri Mar 28 00:11:52 2025] [2025-03-28 00:11:52] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Fri Mar 28 00:11:52 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:52 2025] Database connection successful
+[Fri Mar 28 00:11:52 2025] [2025-03-28 00:11:52] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Fri Mar 28 00:11:53 2025] [::1]:62205 [200]: POST /auth/login
+[Fri Mar 28 00:11:53 2025] [::1]:62205 Closing
+[Fri Mar 28 00:11:54 2025] [::1]:62212 Accepted
+[Fri Mar 28 00:11:54 2025] [2025-03-28 00:11:54] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:54 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:54 2025] Database connection successful
+[Fri Mar 28 00:11:54 2025] [::1]:62212 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:54 2025] [::1]:62212 Closing
+[Fri Mar 28 00:11:54 2025] [::1]:62214 Accepted
+[Fri Mar 28 00:11:54 2025] [2025-03-28 00:11:54] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:11:54 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:11:54 2025] Database connection successful
+[Fri Mar 28 00:11:54 2025] [::1]:62214 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:11:54 2025] [::1]:62214 Closing
+[Fri Mar 28 00:12:51 2025] [::1]:62485 Accepted
+[Fri Mar 28 00:12:51 2025] [2025-03-28 00:12:51] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Fri Mar 28 00:12:51 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:12:51 2025] Database connection successful
+[Fri Mar 28 00:12:52 2025] [2025-03-28 00:12:52] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Fri Mar 28 00:12:52 2025] [::1]:62485 [200]: POST /auth/login
+[Fri Mar 28 00:12:52 2025] [::1]:62485 Closing
+[Fri Mar 28 00:13:07 2025] [::1]:62547 Accepted
+[Fri Mar 28 00:13:07 2025] [2025-03-28 00:13:07] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:13:07 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:13:07 2025] Database connection successful
+[Fri Mar 28 00:13:07 2025] [::1]:62547 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:13:07 2025] [::1]:62547 Closing
+[Fri Mar 28 00:13:07 2025] [::1]:62551 Accepted
+[Fri Mar 28 00:13:07 2025] [2025-03-28 00:13:07] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:13:07 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:13:07 2025] Database connection successful
+[Fri Mar 28 00:13:07 2025] [::1]:62551 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:13:07 2025] [::1]:62551 Closing
+[Fri Mar 28 00:14:45 2025] [::1]:62984 Accepted
+[Fri Mar 28 00:14:45 2025] [::1]:62985 Accepted
+[Fri Mar 28 00:14:45 2025] [2025-03-28 00:14:45] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:14:45 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:14:45 2025] Database connection successful
+[Fri Mar 28 00:14:45 2025] [::1]:62984 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:14:45 2025] [::1]:62984 Closing
+[Fri Mar 28 00:14:45 2025] [2025-03-28 00:14:45] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:14:45 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:14:45 2025] Database connection successful
+[Fri Mar 28 00:14:45 2025] [::1]:62985 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:14:45 2025] [::1]:62985 Closing
+[Fri Mar 28 00:17:26 2025] [::1]:63688 Accepted
+[Fri Mar 28 00:17:26 2025] [::1]:63689 Accepted
+[Fri Mar 28 00:17:26 2025] [2025-03-28 00:17:26] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:17:26 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:17:26 2025] Database connection successful
+[Fri Mar 28 00:17:26 2025] [::1]:63688 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:17:26 2025] [::1]:63688 Closing
+[Fri Mar 28 00:17:26 2025] [2025-03-28 00:17:26] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:17:26 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:17:26 2025] Database connection successful
+[Fri Mar 28 00:17:26 2025] [::1]:63689 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:17:26 2025] [::1]:63689 Closing
+[Fri Mar 28 00:17:28 2025] [::1]:63712 Accepted
+[Fri Mar 28 00:17:28 2025] [2025-03-28 00:17:28] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Fri Mar 28 00:17:28 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:17:28 2025] Database connection successful
+[Fri Mar 28 00:17:29 2025] [2025-03-28 00:17:29] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Fri Mar 28 00:17:29 2025] [::1]:63712 [200]: POST /auth/login
+[Fri Mar 28 00:17:29 2025] [::1]:63712 Closing
+[Fri Mar 28 00:17:30 2025] [::1]:63718 Accepted
+[Fri Mar 28 00:17:30 2025] [2025-03-28 00:17:30] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:17:30 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:17:30 2025] Database connection successful
+[Fri Mar 28 00:17:30 2025] [::1]:63718 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:17:30 2025] [::1]:63718 Closing
+[Fri Mar 28 00:17:30 2025] [::1]:63720 Accepted
+[Fri Mar 28 00:17:30 2025] [2025-03-28 00:17:30] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:17:30 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:17:30 2025] Database connection successful
+[Fri Mar 28 00:17:30 2025] [::1]:63720 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:17:30 2025] [::1]:63720 Closing
+[Fri Mar 28 00:17:39 2025] [::1]:63766 Accepted
+[Fri Mar 28 00:17:39 2025] [::1]:63767 Accepted
+[Fri Mar 28 00:17:39 2025] [2025-03-28 00:17:39] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:17:39 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:17:39 2025] Database connection successful
+[Fri Mar 28 00:17:39 2025] [::1]:63766 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:17:39 2025] [::1]:63766 Closing
+[Fri Mar 28 00:17:39 2025] [2025-03-28 00:17:39] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:17:39 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:17:39 2025] Database connection successful
+[Fri Mar 28 00:17:39 2025] [::1]:63767 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:17:39 2025] [::1]:63767 Closing
+[Fri Mar 28 00:17:40 2025] [::1]:63776 Accepted
+[Fri Mar 28 00:17:40 2025] [::1]:63777 Accepted
+[Fri Mar 28 00:17:40 2025] [2025-03-28 00:17:40] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:17:40 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:17:40 2025] Database connection successful
+[Fri Mar 28 00:17:40 2025] [::1]:63776 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:17:40 2025] [::1]:63776 Closing
+[Fri Mar 28 00:17:40 2025] [2025-03-28 00:17:40] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:17:40 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:17:40 2025] Database connection successful
+[Fri Mar 28 00:17:40 2025] [::1]:63777 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:17:40 2025] [::1]:63777 Closing
+[Fri Mar 28 00:18:11 2025] [::1]:63922 Accepted
+[Fri Mar 28 00:18:11 2025] [2025-03-28 00:18:11] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Fri Mar 28 00:18:11 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:18:11 2025] Database connection successful
+[Fri Mar 28 00:18:11 2025] [2025-03-28 00:18:11] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Fri Mar 28 00:18:12 2025] [::1]:63922 [200]: POST /auth/login
+[Fri Mar 28 00:18:12 2025] [::1]:63922 Closing
+[Fri Mar 28 00:18:13 2025] [::1]:63932 Accepted
+[Fri Mar 28 00:18:13 2025] [2025-03-28 00:18:13] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:18:13 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:18:13 2025] Database connection successful
+[Fri Mar 28 00:18:13 2025] [::1]:63932 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:18:13 2025] [::1]:63932 Closing
+[Fri Mar 28 00:18:13 2025] [::1]:63934 Accepted
+[Fri Mar 28 00:18:13 2025] [2025-03-28 00:18:13] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:18:13 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:18:13 2025] Database connection successful
+[Fri Mar 28 00:18:13 2025] [::1]:63934 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:18:13 2025] [::1]:63934 Closing
+[Fri Mar 28 00:19:09 2025] [::1]:64127 Accepted
+[Fri Mar 28 00:19:09 2025] [2025-03-28 00:19:09] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Fri Mar 28 00:19:09 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:19:09 2025] Database connection successful
+[Fri Mar 28 00:19:09 2025] [2025-03-28 00:19:09] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Fri Mar 28 00:19:09 2025] [::1]:64127 [200]: POST /auth/login
+[Fri Mar 28 00:19:09 2025] [::1]:64127 Closing
+[Fri Mar 28 00:19:11 2025] [::1]:64129 Accepted
+[Fri Mar 28 00:19:11 2025] [2025-03-28 00:19:11] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:19:11 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:19:11 2025] Database connection successful
+[Fri Mar 28 00:19:11 2025] [::1]:64129 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:19:11 2025] [::1]:64129 Closing
+[Fri Mar 28 00:19:11 2025] [::1]:64131 Accepted
+[Fri Mar 28 00:19:11 2025] [2025-03-28 00:19:11] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:19:11 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:19:11 2025] Database connection successful
+[Fri Mar 28 00:19:11 2025] [::1]:64131 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:19:11 2025] [::1]:64131 Closing
+[Fri Mar 28 00:19:27 2025] [::1]:64160 Accepted
+[Fri Mar 28 00:19:29 2025] [::1]:64177 Accepted
+[Fri Mar 28 00:19:29 2025] [2025-03-28 00:19:29] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:19:29 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:19:29 2025] Database connection successful
+[Fri Mar 28 00:19:29 2025] [::1]:64177 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:19:29 2025] [::1]:64177 Closing
+[Fri Mar 28 00:19:29 2025] [::1]:64179 Accepted
+[Fri Mar 28 00:19:29 2025] [2025-03-28 00:19:29] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:19:29 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:19:29 2025] Database connection successful
+[Fri Mar 28 00:19:29 2025] [::1]:64179 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:19:29 2025] [::1]:64179 Closing
+[Fri Mar 28 00:19:32 2025] [::1]:64182 Accepted
+[Fri Mar 28 00:19:32 2025] [2025-03-28 00:19:32] INFO: Request received {"method":"OPTIONS","path":"\/auth\/login","request_body":""}
+
+[Fri Mar 28 00:19:32 2025] [::1]:64182 [200]: OPTIONS /auth/login
+[Fri Mar 28 00:19:32 2025] [::1]:64182 Closing
+[Fri Mar 28 00:19:32 2025] [::1]:64183 Accepted
+[Fri Mar 28 00:19:32 2025] [2025-03-28 00:19:32] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"tim.l\",\"password\":\"ceae5d2b198f9d130c22d16e5b2488bac1d5d166ea46944f408973092bc7706a\"}"}
+
+[Fri Mar 28 00:19:32 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:19:32 2025] Database connection successful
+[Fri Mar 28 00:19:32 2025] [2025-03-28 00:19:32] ERROR: Validation Error {"message":"올바른 이메일 형식이 아닙니다.","code":400,"error_code":"LOGIN_REQUEST_INVALID_EMAIL","file":"\/Users\/kakao\/Cursor\/phpapi\/dto\/Auth\/LoginRequest.php","line":31,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/dto\/Auth\/LoginRequest.php(15): LoginRequest->validate()\n#1 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(34): LoginRequest->__construct()\n#2 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#3 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#4 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"tim.l\",\"password\":\"ceae5d2b198f9d130c22d16e5b2488bac1d5d166ea46944f408973092bc7706a\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"95","sec-ch-ua-platform":"\"macOS\"","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","Content-Type":"application\/json","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko,en;q=0.9"}}}
+
+[Fri Mar 28 00:19:32 2025] [::1]:64183 [400]: POST /auth/login
+[Fri Mar 28 00:19:32 2025] [::1]:64183 Closing
+[Fri Mar 28 00:19:36 2025] [::1]:64186 Accepted
+[Fri Mar 28 00:19:36 2025] [2025-03-28 00:19:36] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"e0d9d2d8c4de1dad95dfcdb18ed162ca5920c97e2d25da5b06b035a906d8c12e\"}"}
+
+[Fri Mar 28 00:19:36 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:19:36 2025] Database connection successful
+[Fri Mar 28 00:19:36 2025] [2025-03-28 00:19:36] INFO: Login password verification {"email":"mcpelee@hotmail.com","login_password":"e0d9d2d8c4de1dad95dfcdb18ed162ca5920c97e2d25da5b06b035a906d8c12e","stored_hashed_password":"$2y$12$Q1LG7ApPjsGozLWoMxmgS.vJMHADu.Xk9KYTuSSGZIqdRrffKgZpi","password_verify_result":false,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Fri Mar 28 00:19:37 2025] [2025-03-28 00:19:37] ERROR: Validation Error {"message":"이메일 또는 비밀번호가 올바르지 않습니다.","code":401,"error_code":"LOGIN_REQUEST_INVALID_CREDENTIALS","file":"\/Users\/kakao\/Cursor\/phpapi\/services\/AuthService.php","line":116,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/AuthController.php(37): AuthService->login(Object(LoginRequest))\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): AuthController->postLogin()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"POST","path":"\/auth\/login","body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"e0d9d2d8c4de1dad95dfcdb18ed162ca5920c97e2d25da5b06b035a906d8c12e\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"109","sec-ch-ua-platform":"\"macOS\"","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","Content-Type":"application\/json","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko,en;q=0.9"}}}
+
+[Fri Mar 28 00:19:37 2025] [::1]:64186 [401]: POST /auth/login
+[Fri Mar 28 00:19:37 2025] [::1]:64186 Closing
+[Fri Mar 28 00:19:40 2025] [::1]:64188 Accepted
+[Fri Mar 28 00:19:40 2025] [2025-03-28 00:19:40] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@hotmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Fri Mar 28 00:19:40 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:19:40 2025] Database connection successful
+[Fri Mar 28 00:19:41 2025] [2025-03-28 00:19:41] INFO: Login password verification {"email":"mcpelee@hotmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$Q1LG7ApPjsGozLWoMxmgS.vJMHADu.Xk9KYTuSSGZIqdRrffKgZpi","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Fri Mar 28 00:19:41 2025] [::1]:64188 [200]: POST /auth/login
+[Fri Mar 28 00:19:41 2025] [::1]:64188 Closing
+[Fri Mar 28 00:19:48 2025] [::1]:64207 Accepted
+[Fri Mar 28 00:19:48 2025] [2025-03-28 00:19:48] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:19:48 2025] [::1]:64207 [403]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:19:48 2025] [::1]:64207 Closing
+[Fri Mar 28 00:19:48 2025] [::1]:64208 Accepted
+[Fri Mar 28 00:19:48 2025] [2025-03-28 00:19:48] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:19:48 2025] [::1]:64208 [403]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:19:48 2025] [::1]:64208 Closing
+[Fri Mar 28 00:19:59 2025] [::1]:64258 Accepted
+[Fri Mar 28 00:19:59 2025] [2025-03-28 00:19:59] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:19:59 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:19:59 2025] Database connection successful
+[Fri Mar 28 00:19:59 2025] [::1]:64258 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:19:59 2025] [::1]:64258 Closing
+[Fri Mar 28 00:19:59 2025] [::1]:64260 Accepted
+[Fri Mar 28 00:19:59 2025] [2025-03-28 00:19:59] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:19:59 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:19:59 2025] Database connection successful
+[Fri Mar 28 00:19:59 2025] [::1]:64260 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:19:59 2025] [::1]:64260 Closing
+[Fri Mar 28 00:22:29 2025] [::1]:64886 Accepted
+[Fri Mar 28 00:22:29 2025] [2025-03-28 00:22:29] INFO: Request received {"method":"GET","path":"","request_body":""}
+
+[Fri Mar 28 00:22:29 2025] [::1]:64886 [401]: GET /
+[Fri Mar 28 00:22:29 2025] [::1]:64886 Closing
+[Fri Mar 28 00:22:38 2025] [::1]:64900 Accepted
+[Fri Mar 28 00:22:38 2025] [2025-03-28 00:22:38] INFO: Request received {"method":"POST","path":"\/auth\/login","request_body":"{\"email\":\"mcpelee@gmail.com\",\"password\":\"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5\"}"}
+
+[Fri Mar 28 00:22:38 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:22:38 2025] Database connection successful
+[Fri Mar 28 00:22:38 2025] [2025-03-28 00:22:38] INFO: Login password verification {"email":"mcpelee@gmail.com","login_password":"38b73a052d2c694ff18427f9cb80c36d86b6f1d40f696cd6a296ea3f8eceebd5","stored_hashed_password":"$2y$12$r1S\/Q7U4H5sv4vXZnVKwWukrHum8VtxQd3T3d3NCz79qiNsjxyXXS","password_verify_result":true,"password_length":64,"stored_hash_length":60,"password_info":{"algo":"2y","algoName":"bcrypt","options":{"cost":12}}}
+
+[Fri Mar 28 00:22:38 2025] [::1]:64900 [200]: POST /auth/login
+[Fri Mar 28 00:22:38 2025] [::1]:64900 Closing
+[Fri Mar 28 00:25:04 2025] [::1]:65503 Accepted
+[Fri Mar 28 00:25:04 2025] [2025-03-28 00:25:04] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:25:04 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:25:04 2025] Database connection successful
+[Fri Mar 28 00:25:04 2025] [::1]:65503 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:25:04 2025] [::1]:65503 Closing
+[Fri Mar 28 00:25:04 2025] [::1]:65507 Accepted
+[Fri Mar 28 00:25:04 2025] [2025-03-28 00:25:04] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:25:04 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:25:04 2025] Database connection successful
+[Fri Mar 28 00:25:04 2025] [::1]:65507 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:25:04 2025] [::1]:65507 Closing
+[Fri Mar 28 00:25:07 2025] [::1]:65525 Accepted
+[Fri Mar 28 00:25:07 2025] [2025-03-28 00:25:07] INFO: Request received {"method":"OPTIONS","path":"\/blog\/write","request_body":""}
+
+[Fri Mar 28 00:25:07 2025] [::1]:65525 [200]: OPTIONS /blog/write
+[Fri Mar 28 00:25:07 2025] [::1]:65525 Closing
+[Fri Mar 28 00:25:07 2025] [::1]:65526 Accepted
+[Fri Mar 28 00:25:07 2025] [2025-03-28 00:25:07] INFO: Request received {"method":"POST","path":"\/blog\/write","request_body":"{\"title\":\"test\",\"content\":\"test\"}"}
+
+[Fri Mar 28 00:25:07 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:25:07 2025] Database connection successful
+[Fri Mar 28 00:25:07 2025] [2025-03-28 00:25:07] ERROR: Database Error {"message":"SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`giun`.`posts`, CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))","code":"23000","sql_state":"23000","sql_message":"Cannot add or update a child row: a foreign key constraint fails (`giun`.`posts`, CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))","trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/services\/BlogService.php(24): PDOStatement->execute(Array)\n#1 \/Users\/kakao\/Cursor\/phpapi\/controllers\/BlogController.php(34): BlogService->write(Object(WriteRequest))\n#2 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): BlogController->postWrite()\n#3 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#4 {main}"}
+
+[Fri Mar 28 00:25:07 2025] [::1]:65526 [500]: POST /blog/write
+[Fri Mar 28 00:25:07 2025] [::1]:65526 Closing
+[Fri Mar 28 00:27:49 2025] [::1]:64160 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Mar 28 00:27:49 2025] [::1]:64160 Closing
+[Fri Mar 28 00:28:25 2025] [::1]:50009 Accepted
+[Fri Mar 28 00:28:25 2025] [2025-03-28 00:28:25] INFO: Request received {"method":"POST","path":"\/blog\/write","request_body":"{\"title\":\"test\",\"content\":\"test\"}"}
+
+[Fri Mar 28 00:28:25 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:28:25 2025] Database connection successful
+[Fri Mar 28 00:28:25 2025] PHP Fatal error:  Uncaught TypeError: base64_encode(): Argument #1 ($string) must be of type string, array given in /Users/kakao/Cursor/phpapi/services/AuthService.php:184
+Stack trace:
+#0 /Users/kakao/Cursor/phpapi/services/AuthService.php(184): base64_encode(Array)
+#1 /Users/kakao/Cursor/phpapi/services/BlogService.php(34): AuthService->validateToken('eyJ0eXAiOiJKV1Q...')
+#2 /Users/kakao/Cursor/phpapi/controllers/BlogController.php(34): BlogService->write(Object(WriteRequest))
+#3 /Users/kakao/Cursor/phpapi/common/Router.php(73): BlogController->postWrite()
+#4 /Users/kakao/Cursor/phpapi/index.php(9): Router->handle()
+#5 {main}
+  thrown in /Users/kakao/Cursor/phpapi/services/AuthService.php on line 184
+[Fri Mar 28 00:28:25 2025] [::1]:50009 [200]: POST /blog/write - Uncaught TypeError: base64_encode(): Argument #1 ($string) must be of type string, array given in /Users/kakao/Cursor/phpapi/services/AuthService.php:184
+Stack trace:
+#0 /Users/kakao/Cursor/phpapi/services/AuthService.php(184): base64_encode(Array)
+#1 /Users/kakao/Cursor/phpapi/services/BlogService.php(34): AuthService->validateToken('eyJ0eXAiOiJKV1Q...')
+#2 /Users/kakao/Cursor/phpapi/controllers/BlogController.php(34): BlogService->write(Object(WriteRequest))
+#3 /Users/kakao/Cursor/phpapi/common/Router.php(73): BlogController->postWrite()
+#4 /Users/kakao/Cursor/phpapi/index.php(9): Router->handle()
+#5 {main}
+  thrown in /Users/kakao/Cursor/phpapi/services/AuthService.php on line 184
+[Fri Mar 28 00:28:25 2025] [::1]:50009 Closing
+[Fri Mar 28 00:29:04 2025] [::1]:50197 Accepted
+[Fri Mar 28 00:29:04 2025] [2025-03-28 00:29:04] INFO: Request received {"method":"POST","path":"\/blog\/write","request_body":"{\"title\":\"test\",\"content\":\"test\"}"}
+
+[Fri Mar 28 00:29:04 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:29:04 2025] Database connection successful
+[Fri Mar 28 00:29:04 2025] [::1]:50197 [200]: POST /blog/write
+[Fri Mar 28 00:29:04 2025] [::1]:50197 Closing
+[Fri Mar 28 00:29:09 2025] [::1]:50220 Accepted
+[Fri Mar 28 00:29:09 2025] [2025-03-28 00:29:09] INFO: Request received {"method":"POST","path":"\/blog\/write","request_body":"{\"title\":\"ㄴㄴ\",\"content\":\"ㄴㄴ\"}"}
+
+[Fri Mar 28 00:29:09 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:29:09 2025] Database connection successful
+[Fri Mar 28 00:29:09 2025] [::1]:50220 [200]: POST /blog/write
+[Fri Mar 28 00:29:09 2025] [::1]:50220 Closing
+[Fri Mar 28 00:29:12 2025] [::1]:50238 Accepted
+[Fri Mar 28 00:29:12 2025] [::1]:50239 Accepted
+[Fri Mar 28 00:29:12 2025] [2025-03-28 00:29:12] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:29:12 2025] [::1]:50238 [200]: OPTIONS /blog/detail?id=4
+[Fri Mar 28 00:29:12 2025] [::1]:50238 Closing
+[Fri Mar 28 00:29:12 2025] [2025-03-28 00:29:12] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:29:12 2025] [::1]:50239 [200]: OPTIONS /blog/detail?id=4
+[Fri Mar 28 00:29:12 2025] [::1]:50239 Closing
+[Fri Mar 28 00:29:12 2025] [::1]:50242 Accepted
+[Fri Mar 28 00:29:12 2025] [2025-03-28 00:29:12] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:29:12 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:29:12 2025] Database connection successful
+[Fri Mar 28 00:29:12 2025] [::1]:50242 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:29:12 2025] [::1]:50242 Closing
+[Fri Mar 28 00:29:12 2025] [::1]:50244 Accepted
+[Fri Mar 28 00:29:12 2025] [2025-03-28 00:29:12] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:29:12 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:29:12 2025] Database connection successful
+[Fri Mar 28 00:29:12 2025] [::1]:50244 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:29:12 2025] [::1]:50244 Closing
+[Fri Mar 28 00:29:15 2025] [::1]:50254 Accepted
+[Fri Mar 28 00:29:15 2025] [2025-03-28 00:29:15] INFO: Request received {"method":"OPTIONS","path":"\/blog\/post\/4","request_body":""}
+
+[Fri Mar 28 00:29:15 2025] [::1]:50254 [200]: OPTIONS /blog/post/4
+[Fri Mar 28 00:29:15 2025] [::1]:50254 Closing
+[Fri Mar 28 00:29:15 2025] [::1]:50255 Accepted
+[Fri Mar 28 00:29:15 2025] [2025-03-28 00:29:15] INFO: Request received {"method":"DELETE","path":"\/blog\/post\/4","request_body":""}
+
+[Fri Mar 28 00:29:15 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:29:15 2025] Database connection successful
+[Fri Mar 28 00:29:15 2025] [2025-03-28 00:29:15] ERROR: Not Found {"message":"Method not found: deletePost in BlogController","request_data":{"method":"DELETE","path":"\/blog\/post\/4","body":"","headers":{"Host":"localhost:8000","Connection":"keep-alive","sec-ch-ua-platform":"\"macOS\"","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNzQzMTc1MzU4fQ.39leAA2f20PF48iKnQ8VRF65lfxYrJrugYg_apSxEHY","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Fri Mar 28 00:29:15 2025] [::1]:50255 [404]: DELETE /blog/post/4
+[Fri Mar 28 00:29:15 2025] [::1]:50255 Closing
+[Fri Mar 28 00:29:18 2025] [::1]:50269 Accepted
+[Fri Mar 28 00:29:18 2025] [2025-03-28 00:29:18] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:29:18 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:29:18 2025] Database connection successful
+[Fri Mar 28 00:29:18 2025] [::1]:50269 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:29:18 2025] [::1]:50269 Closing
+[Fri Mar 28 00:29:18 2025] [::1]:50273 Accepted
+[Fri Mar 28 00:29:18 2025] [2025-03-28 00:29:18] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:29:18 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:29:18 2025] Database connection successful
+[Fri Mar 28 00:29:18 2025] [::1]:50273 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:29:18 2025] [::1]:50273 Closing
+[Fri Mar 28 00:29:19 2025] [::1]:50279 Accepted
+[Fri Mar 28 00:29:19 2025] [2025-03-28 00:29:19] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:29:19 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:29:19 2025] Database connection successful
+[Fri Mar 28 00:29:19 2025] [::1]:50279 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:29:19 2025] [::1]:50279 Closing
+[Fri Mar 28 00:29:19 2025] [::1]:50281 Accepted
+[Fri Mar 28 00:29:19 2025] [2025-03-28 00:29:19] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:29:19 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:29:19 2025] Database connection successful
+[Fri Mar 28 00:29:19 2025] [::1]:50281 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:29:19 2025] [::1]:50281 Closing
+[Fri Mar 28 00:29:23 2025] [::1]:50303 Accepted
+[Fri Mar 28 00:29:23 2025] [2025-03-28 00:29:23] INFO: Request received {"method":"DELETE","path":"\/blog\/post\/4","request_body":""}
+
+[Fri Mar 28 00:29:23 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:29:23 2025] Database connection successful
+[Fri Mar 28 00:29:23 2025] [2025-03-28 00:29:23] ERROR: Not Found {"message":"Method not found: deletePost in BlogController","request_data":{"method":"DELETE","path":"\/blog\/post\/4","body":"","headers":{"Host":"localhost:8000","Connection":"keep-alive","sec-ch-ua-platform":"\"macOS\"","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNzQzMTc1MzU4fQ.39leAA2f20PF48iKnQ8VRF65lfxYrJrugYg_apSxEHY","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Fri Mar 28 00:29:23 2025] [::1]:50303 [404]: DELETE /blog/post/4
+[Fri Mar 28 00:29:23 2025] [::1]:50303 Closing
+[Fri Mar 28 00:30:29 2025] [::1]:50604 Accepted
+[Fri Mar 28 00:30:29 2025] [2025-03-28 00:30:29] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:30:29 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:30:29 2025] Database connection successful
+[Fri Mar 28 00:30:29 2025] [::1]:50604 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:30:29 2025] [::1]:50604 Closing
+[Fri Mar 28 00:30:29 2025] [::1]:50608 Accepted
+[Fri Mar 28 00:30:29 2025] [2025-03-28 00:30:29] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:30:29 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:30:29 2025] Database connection successful
+[Fri Mar 28 00:30:29 2025] [::1]:50608 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:30:29 2025] [::1]:50608 Closing
+[Fri Mar 28 00:30:32 2025] [::1]:50622 Accepted
+[Fri Mar 28 00:30:32 2025] [2025-03-28 00:30:32] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:30:32 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:30:32 2025] Database connection successful
+[Fri Mar 28 00:30:32 2025] [::1]:50622 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:30:32 2025] [::1]:50622 Closing
+[Fri Mar 28 00:30:32 2025] [::1]:50624 Accepted
+[Fri Mar 28 00:30:32 2025] [2025-03-28 00:30:32] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:30:32 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:30:32 2025] Database connection successful
+[Fri Mar 28 00:30:32 2025] [::1]:50624 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:30:32 2025] [::1]:50624 Closing
+[Fri Mar 28 00:30:34 2025] [::1]:50634 Accepted
+[Fri Mar 28 00:30:34 2025] [2025-03-28 00:30:34] INFO: Request received {"method":"DELETE","path":"\/blog\/post\/4","request_body":""}
+
+[Fri Mar 28 00:30:34 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:30:34 2025] Database connection successful
+[Fri Mar 28 00:30:34 2025] [2025-03-28 00:30:34] ERROR: Not Found {"message":"Method not found: deletePost in BlogController","request_data":{"method":"DELETE","path":"\/blog\/post\/4","body":"","headers":{"Host":"localhost:8000","Connection":"keep-alive","sec-ch-ua-platform":"\"macOS\"","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNzQzMTc1MzU4fQ.39leAA2f20PF48iKnQ8VRF65lfxYrJrugYg_apSxEHY","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Fri Mar 28 00:30:34 2025] [::1]:50634 [404]: DELETE /blog/post/4
+[Fri Mar 28 00:30:34 2025] [::1]:50634 Closing
+[Fri Mar 28 00:31:26 2025] [::1]:50847 Accepted
+[Fri Mar 28 00:31:26 2025] [2025-03-28 00:31:26] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:31:26 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:31:26 2025] Database connection successful
+[Fri Mar 28 00:31:26 2025] [::1]:50847 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:31:26 2025] [::1]:50847 Closing
+[Fri Mar 28 00:31:26 2025] [::1]:50851 Accepted
+[Fri Mar 28 00:31:26 2025] [2025-03-28 00:31:26] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:31:26 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:31:26 2025] Database connection successful
+[Fri Mar 28 00:31:26 2025] [::1]:50851 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:31:26 2025] [::1]:50851 Closing
+[Fri Mar 28 00:31:28 2025] [::1]:50862 Accepted
+[Fri Mar 28 00:31:28 2025] [2025-03-28 00:31:28] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:31:28 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:31:28 2025] Database connection successful
+[Fri Mar 28 00:31:28 2025] [::1]:50862 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:31:28 2025] [::1]:50862 Closing
+[Fri Mar 28 00:31:28 2025] [::1]:50864 Accepted
+[Fri Mar 28 00:31:28 2025] [2025-03-28 00:31:28] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:31:28 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:31:28 2025] Database connection successful
+[Fri Mar 28 00:31:28 2025] [::1]:50864 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:31:28 2025] [::1]:50864 Closing
+[Fri Mar 28 00:31:32 2025] [::1]:50882 Accepted
+[Fri Mar 28 00:31:32 2025] [2025-03-28 00:31:32] INFO: Request received {"method":"PUT","path":"\/blog\/post\/4","request_body":"{\"title\":\"ㄴㄴㄷㄷㄷ\",\"content\":\"ㄴㄴㄷㄷㄷ\"}"}
+
+[Fri Mar 28 00:31:32 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:31:32 2025] Database connection successful
+[Fri Mar 28 00:31:32 2025] [2025-03-28 00:31:32] ERROR: Not Found {"message":"Method not found: putPost in BlogController","request_data":{"method":"PUT","path":"\/blog\/post\/4","body":"{\"title\":\"ㄴㄴㄷㄷㄷ\",\"content\":\"ㄴㄴㄷㄷㄷ\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"55","sec-ch-ua-platform":"\"macOS\"","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNzQzMTc1MzU4fQ.39leAA2f20PF48iKnQ8VRF65lfxYrJrugYg_apSxEHY","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","Content-Type":"application\/json","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Fri Mar 28 00:31:32 2025] [::1]:50882 [404]: PUT /blog/post/4
+[Fri Mar 28 00:31:32 2025] [::1]:50882 Closing
+[Fri Mar 28 00:32:16 2025] [::1]:51083 Accepted
+[Fri Mar 28 00:32:16 2025] [2025-03-28 00:32:16] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:32:16 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:32:16 2025] Database connection successful
+[Fri Mar 28 00:32:16 2025] [::1]:51083 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:32:16 2025] [::1]:51083 Closing
+[Fri Mar 28 00:32:16 2025] [::1]:51085 Accepted
+[Fri Mar 28 00:32:16 2025] [2025-03-28 00:32:16] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:32:16 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:32:16 2025] Database connection successful
+[Fri Mar 28 00:32:16 2025] [::1]:51085 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:32:16 2025] [::1]:51085 Closing
+[Fri Mar 28 00:32:17 2025] [::1]:51091 Accepted
+[Fri Mar 28 00:32:17 2025] [2025-03-28 00:32:17] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:32:17 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:32:18 2025] Database connection successful
+[Fri Mar 28 00:32:18 2025] [::1]:51091 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:32:18 2025] [::1]:51091 Closing
+[Fri Mar 28 00:32:18 2025] [::1]:51093 Accepted
+[Fri Mar 28 00:32:18 2025] [2025-03-28 00:32:18] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:32:18 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:32:18 2025] Database connection successful
+[Fri Mar 28 00:32:18 2025] [::1]:51093 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:32:18 2025] [::1]:51093 Closing
+[Fri Mar 28 00:32:19 2025] [::1]:51107 Accepted
+[Fri Mar 28 00:32:19 2025] [::1]:51108 Accepted
+[Fri Mar 28 00:32:19 2025] [2025-03-28 00:32:19] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:32:19 2025] [::1]:51107 [200]: OPTIONS /blog/detail?id=4
+[Fri Mar 28 00:32:19 2025] [::1]:51107 Closing
+[Fri Mar 28 00:32:19 2025] [2025-03-28 00:32:19] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:32:19 2025] [::1]:51108 [200]: OPTIONS /blog/detail?id=4
+[Fri Mar 28 00:32:19 2025] [::1]:51108 Closing
+[Fri Mar 28 00:32:19 2025] [::1]:51109 Accepted
+[Fri Mar 28 00:32:19 2025] [::1]:51110 Accepted
+[Fri Mar 28 00:32:19 2025] [2025-03-28 00:32:19] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:32:19 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:32:19 2025] Database connection successful
+[Fri Mar 28 00:32:19 2025] [::1]:51109 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:32:19 2025] [::1]:51109 Closing
+[Fri Mar 28 00:32:19 2025] [2025-03-28 00:32:19] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:32:19 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:32:19 2025] Database connection successful
+[Fri Mar 28 00:32:19 2025] [::1]:51110 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:32:19 2025] [::1]:51110 Closing
+[Fri Mar 28 00:32:23 2025] [::1]:51129 Accepted
+[Fri Mar 28 00:32:23 2025] [2025-03-28 00:32:23] INFO: Request received {"method":"OPTIONS","path":"\/blog\/update\/4","request_body":""}
+
+[Fri Mar 28 00:32:23 2025] [::1]:51129 [200]: OPTIONS /blog/update/4
+[Fri Mar 28 00:32:23 2025] [::1]:51129 Closing
+[Fri Mar 28 00:32:23 2025] [::1]:51130 Accepted
+[Fri Mar 28 00:32:23 2025] [2025-03-28 00:32:23] INFO: Request received {"method":"PUT","path":"\/blog\/update\/4","request_body":"{\"title\":\"ㄴㄴeee\",\"content\":\"ㄴㄴeee\"}"}
+
+[Fri Mar 28 00:32:23 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:32:23 2025] Database connection successful
+[Fri Mar 28 00:32:23 2025] PHP Warning:  Undefined array key "id" in /Users/kakao/Cursor/phpapi/controllers/BlogController.php on line 59
+[Fri Mar 28 00:32:23 2025] [2025-03-28 00:32:23] ERROR: Validation Error {"message":"유효하지 않은 게시글 ID입니다.","code":400,"error_code":"INVALID_POST_ID","file":"\/Users\/kakao\/Cursor\/phpapi\/controllers\/BlogController.php","line":61,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): BlogController->putUpdate()\n#1 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#2 {main}","request_data":{"method":"PUT","path":"\/blog\/update\/4","body":"{\"title\":\"ㄴㄴeee\",\"content\":\"ㄴㄴeee\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"43","sec-ch-ua-platform":"\"macOS\"","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNzQzMTc1MzU4fQ.39leAA2f20PF48iKnQ8VRF65lfxYrJrugYg_apSxEHY","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","Content-Type":"application\/json","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Fri Mar 28 00:32:23 2025] [::1]:51130 [400]: PUT /blog/update/4
+[Fri Mar 28 00:32:23 2025] [::1]:51130 Closing
+[Fri Mar 28 00:36:46 2025] [::1]:52252 Accepted
+[Fri Mar 28 00:36:46 2025] [2025-03-28 00:36:46] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:36:46 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:36:46 2025] Database connection successful
+[Fri Mar 28 00:36:46 2025] [::1]:52252 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:36:46 2025] [::1]:52252 Closing
+[Fri Mar 28 00:37:54 2025] [::1]:52591 Accepted
+[Fri Mar 28 00:37:54 2025] [2025-03-28 00:37:54] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:37:54 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:37:54 2025] Database connection successful
+[Fri Mar 28 00:37:54 2025] [::1]:52591 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:37:54 2025] [::1]:52591 Closing
+[Fri Mar 28 00:38:01 2025] [::1]:52631 Accepted
+[Fri Mar 28 00:38:01 2025] [2025-03-28 00:38:01] INFO: Request received {"method":"PUT","path":"\/blog\/update\/4","request_body":"{\"id\":4,\"title\":\"ㄴㄴㄷ\",\"content\":\"ㄴㄴㄷㄷ\"}"}
+
+[Fri Mar 28 00:38:01 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:38:01 2025] Database connection successful
+[Fri Mar 28 00:38:01 2025] PHP Warning:  Undefined array key "id" in /Users/kakao/Cursor/phpapi/controllers/BlogController.php on line 59
+[Fri Mar 28 00:38:01 2025] [2025-03-28 00:38:01] ERROR: Validation Error {"message":"유효하지 않은 게시글 ID입니다.","code":400,"error_code":"INVALID_POST_ID","file":"\/Users\/kakao\/Cursor\/phpapi\/controllers\/BlogController.php","line":61,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): BlogController->putUpdate()\n#1 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#2 {main}","request_data":{"method":"PUT","path":"\/blog\/update\/4","body":"{\"id\":4,\"title\":\"ㄴㄴㄷ\",\"content\":\"ㄴㄴㄷㄷ\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"53","sec-ch-ua-platform":"\"macOS\"","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNzQzMTc1MzU4fQ.39leAA2f20PF48iKnQ8VRF65lfxYrJrugYg_apSxEHY","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","Content-Type":"application\/json","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Fri Mar 28 00:38:01 2025] [::1]:52631 [400]: PUT /blog/update/4
+[Fri Mar 28 00:38:01 2025] [::1]:52631 Closing
+[Fri Mar 28 00:39:02 2025] [::1]:52908 Accepted
+[Fri Mar 28 00:39:02 2025] [2025-03-28 00:39:02] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:39:02 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:39:02 2025] Database connection successful
+[Fri Mar 28 00:39:02 2025] [::1]:52908 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:39:02 2025] [::1]:52908 Closing
+[Fri Mar 28 00:39:02 2025] [::1]:52911 Accepted
+[Fri Mar 28 00:39:02 2025] [2025-03-28 00:39:02] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:39:02 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:39:02 2025] Database connection successful
+[Fri Mar 28 00:39:02 2025] [::1]:52911 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:39:02 2025] [::1]:52911 Closing
+[Fri Mar 28 00:39:03 2025] [::1]:52921 Accepted
+[Fri Mar 28 00:39:03 2025] [2025-03-28 00:39:03] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:39:03 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:39:03 2025] Database connection successful
+[Fri Mar 28 00:39:03 2025] [::1]:52921 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:39:03 2025] [::1]:52921 Closing
+[Fri Mar 28 00:39:03 2025] [::1]:52923 Accepted
+[Fri Mar 28 00:39:03 2025] [2025-03-28 00:39:03] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:39:03 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:39:03 2025] Database connection successful
+[Fri Mar 28 00:39:03 2025] [::1]:52923 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:39:03 2025] [::1]:52923 Closing
+[Fri Mar 28 00:39:07 2025] [::1]:52947 Accepted
+[Fri Mar 28 00:39:07 2025] [2025-03-28 00:39:07] INFO: Request received {"method":"PUT","path":"\/blog\/update\/4","request_body":"{\"id\":4,\"title\":\"ㄷㄴㄴ\",\"content\":\"ㄴㄴㄷ\"}"}
+
+[Fri Mar 28 00:39:07 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:39:07 2025] Database connection successful
+[Fri Mar 28 00:39:07 2025] PHP Warning:  Undefined array key "id" in /Users/kakao/Cursor/phpapi/controllers/BlogController.php on line 59
+[Fri Mar 28 00:39:07 2025] [2025-03-28 00:39:07] ERROR: Validation Error {"message":"유효하지 않은 게시글 ID입니다.","code":400,"error_code":"INVALID_POST_ID","file":"\/Users\/kakao\/Cursor\/phpapi\/controllers\/BlogController.php","line":61,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): BlogController->putUpdate()\n#1 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#2 {main}","request_data":{"method":"PUT","path":"\/blog\/update\/4","body":"{\"id\":4,\"title\":\"ㄷㄴㄴ\",\"content\":\"ㄴㄴㄷ\"}","headers":{"Host":"localhost:8000","Connection":"keep-alive","Content-Length":"50","sec-ch-ua-platform":"\"macOS\"","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNzQzMTc1MzU4fQ.39leAA2f20PF48iKnQ8VRF65lfxYrJrugYg_apSxEHY","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","Content-Type":"application\/json","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Fri Mar 28 00:39:07 2025] [::1]:52947 [400]: PUT /blog/update/4
+[Fri Mar 28 00:39:07 2025] [::1]:52947 Closing
+[Fri Mar 28 00:42:22 2025] [::1]:53871 Accepted
+[Fri Mar 28 00:42:22 2025] [2025-03-28 00:42:22] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:42:22 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:42:22 2025] Database connection successful
+[Fri Mar 28 00:42:22 2025] [::1]:53871 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:42:22 2025] [::1]:53871 Closing
+[Fri Mar 28 00:42:22 2025] [::1]:53875 Accepted
+[Fri Mar 28 00:42:22 2025] [2025-03-28 00:42:22] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:42:22 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:42:22 2025] Database connection successful
+[Fri Mar 28 00:42:22 2025] [::1]:53875 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:42:22 2025] [::1]:53875 Closing
+[Fri Mar 28 00:42:23 2025] [::1]:53888 Accepted
+[Fri Mar 28 00:42:23 2025] [2025-03-28 00:42:23] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:42:23 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:42:23 2025] Database connection successful
+[Fri Mar 28 00:42:23 2025] [::1]:53888 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:42:23 2025] [::1]:53888 Closing
+[Fri Mar 28 00:42:23 2025] [::1]:53890 Accepted
+[Fri Mar 28 00:42:23 2025] [2025-03-28 00:42:23] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:42:23 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:42:23 2025] Database connection successful
+[Fri Mar 28 00:42:23 2025] [::1]:53890 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:42:23 2025] [::1]:53890 Closing
+[Fri Mar 28 00:42:27 2025] [::1]:53913 Accepted
+[Fri Mar 28 00:42:27 2025] [2025-03-28 00:42:27] INFO: Request received {"method":"PUT","path":"\/blog\/update\/4","request_body":"{\"id\":4,\"title\":\"ㄷㄴㄴ\",\"content\":\"ㄴㄴㄷ\"}"}
+
+[Fri Mar 28 00:42:27 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:42:27 2025] Database connection successful
+[Fri Mar 28 00:42:27 2025] [::1]:53913 [200]: PUT /blog/update/4
+[Fri Mar 28 00:42:27 2025] [::1]:53913 Closing
+[Fri Mar 28 00:42:30 2025] [::1]:53928 Accepted
+[Fri Mar 28 00:42:30 2025] [2025-03-28 00:42:30] INFO: Request received {"method":"OPTIONS","path":"\/blog\/delete\/4","request_body":""}
+
+[Fri Mar 28 00:42:30 2025] [::1]:53928 [200]: OPTIONS /blog/delete/4
+[Fri Mar 28 00:42:30 2025] [::1]:53928 Closing
+[Fri Mar 28 00:42:30 2025] [::1]:53929 Accepted
+[Fri Mar 28 00:42:30 2025] [2025-03-28 00:42:30] INFO: Request received {"method":"DELETE","path":"\/blog\/delete\/4","request_body":""}
+
+[Fri Mar 28 00:42:30 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:42:30 2025] Database connection successful
+[Fri Mar 28 00:42:30 2025] [2025-03-28 00:42:30] ERROR: Validation Error {"message":"게시글 ID는 필수입니다.","code":400,"error_code":"REQUIRED_POST_ID","file":"\/Users\/kakao\/Cursor\/phpapi\/dto\/Blog\/DeleteRequest.php","line":12,"trace":"#0 \/Users\/kakao\/Cursor\/phpapi\/controllers\/BlogController.php(75): DeleteRequest->__construct()\n#1 \/Users\/kakao\/Cursor\/phpapi\/common\/Router.php(73): BlogController->deleteDelete()\n#2 \/Users\/kakao\/Cursor\/phpapi\/index.php(9): Router->handle()\n#3 {main}","request_data":{"method":"DELETE","path":"\/blog\/delete\/4","body":"","headers":{"Host":"localhost:8000","Connection":"keep-alive","sec-ch-ua-platform":"\"macOS\"","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNzQzMTc1MzU4fQ.39leAA2f20PF48iKnQ8VRF65lfxYrJrugYg_apSxEHY","User-Agent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/134.0.0.0 Safari\/537.36","Accept":"application\/json, text\/plain, *\/*","sec-ch-ua":"\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"","sec-ch-ua-mobile":"?0","Origin":"http:\/\/localhost:3000","Sec-Fetch-Site":"same-site","Sec-Fetch-Mode":"cors","Sec-Fetch-Dest":"empty","Referer":"http:\/\/localhost:3000\/","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7"}}}
+
+[Fri Mar 28 00:42:30 2025] [::1]:53929 [400]: DELETE /blog/delete/4
+[Fri Mar 28 00:42:30 2025] [::1]:53929 Closing
+[Fri Mar 28 00:42:32 2025] [::1]:53945 Accepted
+[Fri Mar 28 00:42:32 2025] [2025-03-28 00:42:32] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:42:32 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:42:32 2025] Database connection successful
+[Fri Mar 28 00:42:32 2025] [::1]:53945 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:42:32 2025] [::1]:53945 Closing
+[Fri Mar 28 00:42:32 2025] [::1]:53949 Accepted
+[Fri Mar 28 00:42:32 2025] [2025-03-28 00:42:32] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:42:32 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:42:32 2025] Database connection successful
+[Fri Mar 28 00:42:32 2025] [::1]:53949 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:42:32 2025] [::1]:53949 Closing
+[Fri Mar 28 00:42:35 2025] [::1]:53959 Accepted
+[Fri Mar 28 00:42:35 2025] [2025-03-28 00:42:35] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:42:35 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:42:35 2025] Database connection successful
+[Fri Mar 28 00:42:35 2025] [::1]:53959 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:42:35 2025] [::1]:53959 Closing
+[Fri Mar 28 00:42:35 2025] [::1]:53961 Accepted
+[Fri Mar 28 00:42:35 2025] [2025-03-28 00:42:35] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:42:35 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:42:35 2025] Database connection successful
+[Fri Mar 28 00:42:35 2025] [::1]:53961 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:42:35 2025] [::1]:53961 Closing
+[Fri Mar 28 00:44:20 2025] [::1]:54424 Accepted
+[Fri Mar 28 00:44:20 2025] [::1]:54425 Accepted
+[Fri Mar 28 00:44:20 2025] [2025-03-28 00:44:20] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:44:20 2025] [::1]:54424 [200]: OPTIONS /blog/detail?id=4
+[Fri Mar 28 00:44:20 2025] [::1]:54424 Closing
+[Fri Mar 28 00:44:20 2025] [2025-03-28 00:44:20] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:44:20 2025] [::1]:54425 [200]: OPTIONS /blog/detail?id=4
+[Fri Mar 28 00:44:20 2025] [::1]:54425 Closing
+[Fri Mar 28 00:44:20 2025] [::1]:54426 Accepted
+[Fri Mar 28 00:44:20 2025] [::1]:54427 Accepted
+[Fri Mar 28 00:44:20 2025] [2025-03-28 00:44:20] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:44:20 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:44:20 2025] Database connection successful
+[Fri Mar 28 00:44:20 2025] [::1]:54426 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:44:20 2025] [::1]:54426 Closing
+[Fri Mar 28 00:44:20 2025] [2025-03-28 00:44:20] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:44:20 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:44:20 2025] Database connection successful
+[Fri Mar 28 00:44:20 2025] [::1]:54427 [200]: GET /blog/detail?id=4
+[Fri Mar 28 00:44:20 2025] [::1]:54427 Closing
+[Fri Mar 28 00:44:23 2025] [::1]:54439 Accepted
+[Fri Mar 28 00:44:23 2025] [2025-03-28 00:44:23] INFO: Request received {"method":"OPTIONS","path":"\/blog\/delete","request_body":""}
+
+[Fri Mar 28 00:44:23 2025] [::1]:54439 [200]: OPTIONS /blog/delete
+[Fri Mar 28 00:44:23 2025] [::1]:54439 Closing
+[Fri Mar 28 00:44:23 2025] [::1]:54440 Accepted
+[Fri Mar 28 00:44:23 2025] [2025-03-28 00:44:23] INFO: Request received {"method":"DELETE","path":"\/blog\/delete","request_body":"{\"id\":4}"}
+
+[Fri Mar 28 00:44:23 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:44:23 2025] Database connection successful
+[Fri Mar 28 00:44:23 2025] [::1]:54440 [200]: DELETE /blog/delete
+[Fri Mar 28 00:44:23 2025] [::1]:54440 Closing
+[Fri Mar 28 00:45:06 2025] [::1]:54656 Accepted
+[Fri Mar 28 00:45:06 2025] [2025-03-28 00:45:06] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:45:06 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:06 2025] Database connection successful
+[Fri Mar 28 00:45:06 2025] [::1]:54656 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:45:06 2025] [::1]:54656 Closing
+[Fri Mar 28 00:45:06 2025] [::1]:54660 Accepted
+[Fri Mar 28 00:45:06 2025] [2025-03-28 00:45:06] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:45:06 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:06 2025] Database connection successful
+[Fri Mar 28 00:45:06 2025] [::1]:54660 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:45:06 2025] [::1]:54660 Closing
+[Fri Mar 28 00:45:07 2025] [::1]:54666 Accepted
+[Fri Mar 28 00:45:07 2025] [::1]:54667 Accepted
+[Fri Mar 28 00:45:07 2025] [2025-03-28 00:45:07] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:07 2025] [::1]:54666 [200]: OPTIONS /blog/detail?id=3
+[Fri Mar 28 00:45:07 2025] [::1]:54666 Closing
+[Fri Mar 28 00:45:07 2025] [2025-03-28 00:45:07] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:07 2025] [::1]:54667 [200]: OPTIONS /blog/detail?id=3
+[Fri Mar 28 00:45:07 2025] [::1]:54667 Closing
+[Fri Mar 28 00:45:07 2025] [::1]:54668 Accepted
+[Fri Mar 28 00:45:07 2025] [2025-03-28 00:45:07] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:07 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:07 2025] Database connection successful
+[Fri Mar 28 00:45:07 2025] [::1]:54668 [200]: GET /blog/detail?id=3
+[Fri Mar 28 00:45:07 2025] [::1]:54668 Closing
+[Fri Mar 28 00:45:07 2025] [::1]:54670 Accepted
+[Fri Mar 28 00:45:07 2025] [2025-03-28 00:45:07] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:07 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:07 2025] Database connection successful
+[Fri Mar 28 00:45:07 2025] [::1]:54670 [200]: GET /blog/detail?id=3
+[Fri Mar 28 00:45:07 2025] [::1]:54670 Closing
+[Fri Mar 28 00:45:10 2025] [::1]:54688 Accepted
+[Fri Mar 28 00:45:10 2025] [::1]:54689 Accepted
+[Fri Mar 28 00:45:10 2025] [2025-03-28 00:45:10] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:10 2025] [::1]:54688 [200]: OPTIONS /blog/detail?id=3
+[Fri Mar 28 00:45:10 2025] [::1]:54688 Closing
+[Fri Mar 28 00:45:10 2025] [2025-03-28 00:45:10] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:10 2025] [::1]:54689 [200]: OPTIONS /blog/detail?id=3
+[Fri Mar 28 00:45:10 2025] [::1]:54689 Closing
+[Fri Mar 28 00:45:10 2025] [::1]:54690 Accepted
+[Fri Mar 28 00:45:10 2025] [::1]:54691 Accepted
+[Fri Mar 28 00:45:10 2025] [2025-03-28 00:45:10] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:10 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:10 2025] Database connection successful
+[Fri Mar 28 00:45:10 2025] [::1]:54690 [200]: GET /blog/detail?id=3
+[Fri Mar 28 00:45:10 2025] [::1]:54690 Closing
+[Fri Mar 28 00:45:10 2025] [2025-03-28 00:45:10] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:10 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:10 2025] Database connection successful
+[Fri Mar 28 00:45:10 2025] [::1]:54691 [200]: GET /blog/detail?id=3
+[Fri Mar 28 00:45:10 2025] [::1]:54691 Closing
+[Fri Mar 28 00:45:11 2025] [::1]:54698 Accepted
+[Fri Mar 28 00:45:11 2025] [2025-03-28 00:45:11] INFO: Request received {"method":"DELETE","path":"\/blog\/delete","request_body":"{\"id\":3}"}
+
+[Fri Mar 28 00:45:11 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:11 2025] Database connection successful
+[Fri Mar 28 00:45:11 2025] [::1]:54698 [200]: DELETE /blog/delete
+[Fri Mar 28 00:45:11 2025] [::1]:54698 Closing
+[Fri Mar 28 00:45:11 2025] [::1]:54700 Accepted
+[Fri Mar 28 00:45:11 2025] [2025-03-28 00:45:11] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:45:11 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:11 2025] Database connection successful
+[Fri Mar 28 00:45:11 2025] [::1]:54700 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:45:11 2025] [::1]:54700 Closing
+[Fri Mar 28 00:45:11 2025] [::1]:54702 Accepted
+[Fri Mar 28 00:45:11 2025] [2025-03-28 00:45:11] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:45:11 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:11 2025] Database connection successful
+[Fri Mar 28 00:45:11 2025] [::1]:54702 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:45:11 2025] [::1]:54702 Closing
+[Fri Mar 28 00:45:13 2025] [::1]:54712 Accepted
+[Fri Mar 28 00:45:13 2025] [::1]:54713 Accepted
+[Fri Mar 28 00:45:13 2025] [2025-03-28 00:45:13] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:13 2025] [::1]:54712 [200]: OPTIONS /blog/detail?id=1
+[Fri Mar 28 00:45:13 2025] [::1]:54712 Closing
+[Fri Mar 28 00:45:13 2025] [2025-03-28 00:45:13] INFO: Request received {"method":"OPTIONS","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:13 2025] [::1]:54713 [200]: OPTIONS /blog/detail?id=1
+[Fri Mar 28 00:45:13 2025] [::1]:54713 Closing
+[Fri Mar 28 00:45:13 2025] [::1]:54714 Accepted
+[Fri Mar 28 00:45:13 2025] [2025-03-28 00:45:13] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:13 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:13 2025] Database connection successful
+[Fri Mar 28 00:45:13 2025] [::1]:54714 [200]: GET /blog/detail?id=1
+[Fri Mar 28 00:45:13 2025] [::1]:54714 Closing
+[Fri Mar 28 00:45:13 2025] [::1]:54716 Accepted
+[Fri Mar 28 00:45:13 2025] [2025-03-28 00:45:13] INFO: Request received {"method":"GET","path":"\/blog\/detail","request_body":""}
+
+[Fri Mar 28 00:45:13 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:13 2025] Database connection successful
+[Fri Mar 28 00:45:13 2025] [::1]:54716 [200]: GET /blog/detail?id=1
+[Fri Mar 28 00:45:13 2025] [::1]:54716 Closing
+[Fri Mar 28 00:45:15 2025] [::1]:54726 Accepted
+[Fri Mar 28 00:45:15 2025] [2025-03-28 00:45:15] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:45:15 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:15 2025] Database connection successful
+[Fri Mar 28 00:45:15 2025] [::1]:54726 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:45:15 2025] [::1]:54726 Closing
+[Fri Mar 28 00:45:15 2025] [::1]:54728 Accepted
+[Fri Mar 28 00:45:15 2025] [2025-03-28 00:45:15] INFO: Request received {"method":"GET","path":"\/blog\/list","request_body":""}
+
+[Fri Mar 28 00:45:15 2025] Database connection attempt with config: {"host":"127.0.0.1","port":"3306","name":"giun","user":"root","password":"test123"}
+[Fri Mar 28 00:45:15 2025] Database connection successful
+[Fri Mar 28 00:45:15 2025] [::1]:54728 [200]: GET /blog/list?page=1&limit=10
+[Fri Mar 28 00:45:15 2025] [::1]:54728 Closing

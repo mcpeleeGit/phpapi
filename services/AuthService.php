@@ -1,21 +1,20 @@
 <?php
 
+require_once __DIR__ . '/../common/Logger.php';
+
 class AuthService {
     private $db;
     private $logger;
     
     public function __construct() {
         require_once __DIR__ . '/../config/Database.php';
-        require_once __DIR__ . '/../common/Logger.php';
         
         try {
             $this->db = Database::getInstance();
             $this->logger = Logger::getInstance();
         } catch (Exception $e) {
-            $this->logger->error("AuthService initialization failed", [
-                'error' => $e->getMessage(),
-                'trace' => $e->getTraceAsString()
-            ]);
+            // Logger가 초기화되지 않은 상태에서는 error_log를 사용
+            error_log("AuthService initialization failed: " . $e->getMessage());
             throw new Exception('서비스 초기화 중 오류가 발생했습니다.', 500);
         }
     }
@@ -161,5 +160,50 @@ class AuthService {
         $base64UrlSignature = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($signature));
         
         return $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
+    }
+    
+    /**
+     * JWT 토큰 검증 및 디코딩
+     * 
+     * @param string $token
+     * @return array
+     * @throws Exception
+     */
+    public function validateToken($token) {
+        try {
+            $header = json_decode(base64_decode(str_replace(['-', '_'], ['+', '/'], explode('.', $token)[0])), true);
+            $payload = json_decode(base64_decode(str_replace(['-', '_'], ['+', '/'], explode('.', $token)[1])), true);
+            
+            // 토큰 만료 확인
+            if (isset($payload['exp']) && $payload['exp'] < time()) {
+                throw new Exception('만료된 토큰입니다.', 401);
+            }
+            
+            // 서명 검증
+            $headerJson = json_encode($header);
+            $payloadJson = json_encode($payload);
+            
+            $base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($headerJson));
+            $base64UrlPayload = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($payloadJson));
+            
+            $signature = hash_hmac('sha256', 
+                $base64UrlHeader . "." . $base64UrlPayload, 
+                'your-secret-key', 
+                true
+            );
+            $base64UrlSignature = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($signature));
+            
+            if ($base64UrlSignature !== explode('.', $token)[2]) {
+                throw new Exception('유효하지 않은 토큰입니다.', 401);
+            }
+            
+            return $payload;
+        } catch (Exception $e) {
+            $this->logger->error("Token validation failed", [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ]);
+            throw new Exception('토큰 검증에 실패했습니다.', 401);
+        }
     }
 }
