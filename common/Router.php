@@ -14,7 +14,7 @@ class Router {
         require_once __DIR__ . '/Logger.php';
         
         $this->authMiddleware = new AuthMiddleware();
-        $this->securityMiddleware = new SecurityMiddleware();
+        //$this->securityMiddleware = new SecurityMiddleware();
         $this->logger = Logger::getInstance();
     }
     
@@ -34,9 +34,9 @@ class Router {
             ]);
             
             // 보안 미들웨어 실행
-            if (!$this->securityMiddleware->before()) {
-                return;
-            }
+            //if (!$this->securityMiddleware->before()) {
+            //    return;
+            //}
             
             // 인증 미들웨어 실행
             if (!$this->authMiddleware->before()) {
@@ -123,7 +123,7 @@ class Router {
             );
         } finally {
             // 미들웨어 after 메소드 실행
-            $this->securityMiddleware->after();
+            //$this->securityMiddleware->after();
             $this->authMiddleware->after();
         }
     }
