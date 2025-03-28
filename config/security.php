@@ -5,6 +5,7 @@ return [
     'allowed_ips' => [
         '127.0.0.1',    // localhost
         '::1',          // localhost IPv6
+        '112.175.185.133', // giun.dothome.co.kr
         'unknown'
         // TODO: 실제 운영 환경의 IP 주소 추가
     ],
